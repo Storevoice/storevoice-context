@@ -31,6 +31,12 @@
 | 2026-09-04 | Capability Universality (FQ-04) | Architecture | APPROVED | Change 004B.2 | StoreVoice operates one universal platform; customer access governed through package entitlements; package differences must not create separate architectures |
 | 2026-09-04 | Regulatory Adaptation Scope (FQ-06) | Architecture | APPROVED | Change 004B.2 | StoreVoice centrally governs regulatory adaptation; mandatory changes cannot be refused; implementation may be phased centrally where legally permissible |
 | 2026-09-04 | Package Evolution (FQ-10) | Business | APPROVED | Change 004B.2 | StoreVoice may evolve packages under central human governance; existing customers retain commitments for applicable period; material changes versioned and communicated |
+| 2026-09-04 | Visual Design Authority (FD-11) | Design | APPROVED | Change 005D | StoreVoice requires dedicated Visual/Product Design capability; Frontend implements approved design but does not own design authority |
+| 2026-09-04 | Design System First (FD-12) | Design | APPROVED | Change 005D | Foundational design system must be established before customer-facing frontend implementation that depends upon it |
+| 2026-09-04 | Content Ownership (FD-13) | Product | APPROVED | Change 005D | StoreVoice requires dedicated Content/Product Copy capability; content is part of the product experience |
+| 2026-09-04 | Product Management (FD-14) | Product | APPROVED | Change 005D | StoreVoice requires Product Management/Product Strategy capability to translate founder decisions into product requirements |
+| 2026-09-04 | Agent Orchestration Before Phase 2 (FD-15) | Process | APPROVED | Change 005D | Agent organization must have executable orchestration model before Phase 2 implementation begins |
+| 2026-09-04 | Visual and UX Verification (FD-16) | QA | APPROVED | Change 005D | QA must include explicit Visual and UX verification capability; QA verifies but does not independently redesign |
 
 ---
 
@@ -82,4 +88,4 @@ When recording a new decision:
 ---
 
 **Last Updated:** 2026-09-04
-**Approved By:** Change 004B.2 — Record, Trace, and Freeze All Founder Decisions
+**Approved By:** Change 005D — Comprehensive Commercial Product & Autonomous Organization Model

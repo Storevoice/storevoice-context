@@ -536,6 +536,209 @@ Mandatory regulatory or safety changes remain governed by the central compliance
 
 ---
 
+## 6.35 Visual Design Authority (FD-11)
+
+StoreVoice requires dedicated Visual/Product Design capability.
+
+Frontend implementation agents must NOT independently establish StoreVoice visual direction, brand expression, visual hierarchy, or design-system authority.
+
+Visual/Product Design is responsible for proposing:
+
+* visual direction
+* interface composition
+* interaction presentation
+* visual hierarchy
+* component usage
+* responsive visual behavior
+* design-system evolution
+* visual experience decisions
+
+However:
+
+AI-generated design proposals are NOT automatically authoritative.
+
+Design proposals remain subordinate to:
+
+**Founder → Source of Truth → approved Brand/Visual/Product decisions**
+
+When a design decision changes an approved brand, product, or experience principle, the appropriate human approval/governance path is required.
+
+Frontend implements approved design.
+
+Frontend does not silently become the design authority.
+
+---
+
+## 6.36 Design System First (FD-12)
+
+The foundational StoreVoice design system must be established before customer-facing frontend implementation that depends upon it.
+
+The Design System must define, as appropriate:
+
+* design tokens
+* color
+* typography
+* spacing
+* layout
+* grid
+* radius
+* elevation
+* iconography
+* component principles
+* component states
+* interaction states
+* responsive behavior
+* accessibility requirements
+* motion principles where applicable
+* content presentation principles
+* visual hierarchy
+* reusable patterns
+
+The design system must be treated as a controlled product asset.
+
+Frontend agents consume it.
+
+Frontend agents may propose changes.
+
+Frontend agents do not unilaterally redefine it.
+
+Design-system changes must remain traceable.
+
+---
+
+## 6.37 Content Ownership (FD-13)
+
+StoreVoice requires dedicated Content/Product Copy capability.
+
+Content ownership includes:
+
+* product copy
+* website copy
+* onboarding copy
+* customer-facing explanations
+* UI microcopy
+* error messaging
+* empty states
+* calls to action
+* trust/compliance communication
+* service explanations
+* commercial messaging
+* terminology
+* localization-ready content structures
+
+Content must not be treated as filler added after engineering.
+
+Content is part of the product experience.
+
+Content agents must remain subordinate to approved:
+
+* positioning
+* product truth
+* business rules
+* compliance requirements
+* Founder decisions
+
+Content agents must never invent capabilities that the product does not have.
+
+---
+
+## 6.38 Product Management (FD-14)
+
+StoreVoice requires a Product Management/Product Strategy capability.
+
+Product Management translates approved Founder decisions and strategic direction into explicit product requirements.
+
+Product Management is responsible for:
+
+* product requirements
+* feature definition
+* acceptance criteria
+* user/customer outcomes
+* prioritization
+* product dependency mapping
+* scope clarification
+* requirement traceability
+* product-level ambiguity resolution within authority
+* identifying conflicts or missing decisions
+* maintaining product coherence
+
+Product Management does NOT override Founder Decisions.
+
+When a question exceeds its authority:
+
+**STOP → DOCUMENT → ESCALATE**
+
+Product Management must not silently convert assumptions into product truth.
+
+---
+
+## 6.39 Agent Orchestration Before Phase 2 (FD-15)
+
+The StoreVoice agent organization must have an actual executable orchestration model before Phase 2 implementation begins.
+
+A list of agent roles is insufficient.
+
+The operating model must define:
+
+* agent registration
+* agent responsibilities
+* authority boundaries
+* task assignment
+* dependency resolution
+* context propagation
+* handoffs
+* artifact exchange
+* parallel execution
+* sequential execution
+* blocking dependencies
+* failure detection
+* retry handling
+* revision loops
+* review loops
+* escalation
+* completion criteria
+* status reporting
+* traceability
+* auditability
+
+The Orchestrator must coordinate the organization.
+
+It must NOT become a product decision authority.
+
+It coordinates work under the approved Source of Truth.
+
+---
+
+## 6.40 Visual and UX Verification (FD-16)
+
+QA must include explicit Visual and UX verification capability.
+
+Visual/UX verification must cover, where applicable:
+
+* design-system conformance
+* visual hierarchy
+* responsive behavior
+* accessibility
+* interaction consistency
+* content presentation
+* critical user flows
+* visual regressions
+* implementation/design divergence
+* cross-device behavior
+* customer-facing polish
+
+QA verifies.
+
+QA does not independently redesign the product.
+
+When QA discovers a design problem:
+
+**IDENTIFY → DOCUMENT → ROUTE TO DESIGN/PRODUCT OWNER**
+
+Do not silently redesign during QA.
+
+---
+
 ## Rules for Future Updates
 
 - Founder decisions are authoritative and must not be altered without explicit founder approval
@@ -546,4 +749,4 @@ Mandatory regulatory or safety changes remain governed by the central compliance
 ---
 
 **Last Updated:** 2026-09-04
-**Approved By:** Change 004B.2 — Record, Trace, and Freeze All Founder Decisions
+**Approved By:** Change 005D — Comprehensive Commercial Product & Autonomous Organization Model (FD-11 through FD-16)

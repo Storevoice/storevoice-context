@@ -2,7 +2,41 @@
 
 **Purpose:** Mandatory governance rules for all AI agents and human developers working with StoreVoice Source of Truth.
 
-**Status:** TO BE CONFIRMED
+**Status:** DECISION
+
+---
+
+## StoreVoice Development Model
+
+StoreVoice is developed as a **multi-disciplinary autonomous product organization**, not simply a coding-agent swarm.
+
+The agent organization covers the entire product lifecycle:
+
+```text
+DISCOVER → DEFINE → DESIGN → BUILD → VERIFY → LAUNCH → ACTIVATE → OPERATE → MEASURE → LEARN → IMPROVE
+```
+
+### Authority Hierarchy
+
+```text
+1. Human Founder
+2. Approved Source of Truth
+3. Approved Architecture
+4. Implementation Blueprint
+5. Existing Tested Implementation
+6. AI Recommendations
+```
+
+**AI recommendations are NOT decisions.**
+
+The human founder has final authority over:
+- Product
+- Business model
+- UX
+- Visual direction
+- Architecture
+- Scope
+- Major changes
 
 ---
 
@@ -43,6 +77,7 @@ All AI agents must follow this exact sequence:
 * Turn assumptions into facts
 * Silently resolve conflicting requirements
 * Modify frozen components without explicit authorization
+* Fabricate customers, logos, reviews, testimonials, case studies, statistics, certifications, awards, partnerships, legal entities, addresses, security controls, compliance claims, SLA guarantees, uptime guarantees, data residency, subprocessors, retention periods, DPO information, founder history, or press coverage
 
 ---
 
@@ -74,28 +109,6 @@ Changes architecture, product behaviour, major UX, design system, data model, in
 **Process:** `INSPECT → IMPACT ANALYSIS → PROPOSAL → STOP → OWNER APPROVAL → IMPLEMENT → TEST → AUDIT`
 
 The AI must not independently convert a large change into an implementation decision.
-
----
-
-## Authority Hierarchy
-
-1. Human owner
-2. Approved Source of Truth
-3. Approved architectural/design/product decisions
-4. Existing tested implementation
-5. AI recommendations
-6. AI assumptions
-
-**AI recommendations are NOT decisions.**
-
-The human owner has final authority over:
-- Product
-- Business model
-- UX
-- Visual direction
-- Architecture
-- Scope
-- Major changes
 
 ---
 
@@ -138,6 +151,32 @@ All AI agents must consult this repository before making changes to the StoreVoi
 
 ---
 
+## Commercial Quality
+
+A technically perfect product can still fail commercially.
+
+```text
+TECHNICALLY CORRECT
+≠
+PRODUCT GOOD
+≠
+UX GOOD
+≠
+COMMERCIAL GOOD
+```
+
+The system must be capable of rejecting technically correct work that:
+
+* weakens positioning
+* harms conversion
+* confuses users
+* damages trust
+* violates brand
+* creates poor UX
+* creates commercial incoherence
+
+---
+
 ## Rules for Future Updates
 
 - Updates to this document require human owner approval
@@ -146,5 +185,5 @@ All AI agents must consult this repository before making changes to the StoreVoi
 
 ---
 
-**Last Updated:** [TO BE CONFIRMED]
-**Approved By:** [TO BE CONFIRMED]
+**Last Updated:** 2026-09-04
+**Approved By:** Change 005D — Comprehensive Commercial Product & Autonomous Organization Model

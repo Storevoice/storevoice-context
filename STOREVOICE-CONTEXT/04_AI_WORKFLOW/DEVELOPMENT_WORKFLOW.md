@@ -10,9 +10,100 @@
 
 ## Development Workflow Overview
 
-[TO BE CONFIRMED]
+**Status:** DECISION
 
-High-level description of the development workflow.
+StoreVoice is developed as a multi-disciplinary autonomous product organization, not simply a coding-agent swarm.
+
+The workflow follows the complete product lifecycle:
+
+```text
+DISCOVER
+  ↓
+DEFINE
+  ↓
+SPECIFY
+  ↓
+DESIGN
+  ↓
+FREEZE
+  ↓
+BUILD
+  ↓
+TEST
+  ↓
+REVIEW
+  ↓
+RED TEAM
+  ↓
+COMMERCIAL VALIDATION
+  ↓
+UX/VISUAL VALIDATION
+  ↓
+ACCEPT
+  ↓
+COMMIT
+  ↓
+AUDIT AGAIN
+```
+
+### Agent Orchestration
+
+The Orchestrator coordinates all agent activities:
+
+* decomposes approved work
+* determines dependencies
+* selects appropriate agents
+* provides required context
+* dispatches work
+* collects artifacts
+* tracks status
+* detects blockers
+* initiates reviews
+* initiates revisions
+* coordinates parallel work
+* enforces gates
+* escalates unresolved authority conflicts
+* verifies completion
+
+### Dependency Types
+
+**Sequential** — One output required before another agent begins.
+
+**Parallel** — Independent workstreams operating simultaneously.
+
+**Gated** — Downstream implementation waits for approval or validation.
+
+### Revision Loop
+
+When work fails validation:
+
+```text
+BUILD
+ ↓
+TEST
+ ↓
+AUDIT
+ ↓
+FAIL
+ ↓
+IDENTIFY FAILURE OWNER
+ ↓
+RETURN CONTEXT + FINDINGS
+ ↓
+REVISE
+ ↓
+RETEST
+ ↓
+RE-AUDIT
+```
+
+### Authority Escalation
+
+If an agent encounters conflicting decisions, missing decisions, or authority conflicts:
+
+**STOP → IDENTIFY → DOCUMENT → ESCALATE**
+
+The Orchestrator surfaces the issue to the correct authority.
 
 ---
 

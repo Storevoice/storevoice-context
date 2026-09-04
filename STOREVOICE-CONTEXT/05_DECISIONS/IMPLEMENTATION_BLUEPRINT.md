@@ -2704,90 +2704,674 @@ Phase 0 → Phase 1 → Phase 5 → Phase 6 → Phase 7 → Phase 8 → Phase 15
 
 ---
 
-## SECTION AB — CODING AGENT OWNERSHIP
+## SECTION AB — COMMERCIAL PRODUCT AGENT ORGANIZATION
 
-### Agent Roles
+### Organization Overview
 
-| Agent | Mission | Owned Areas | Forbidden Areas |
-|-------|---------|-------------|-----------------|
-| **Principal Architect** | Overall architecture coherence | Architecture decisions, design review | Implementation code |
-| **Orchestrator** | Task dispatch and coordination | Task management, agent coordination | Implementation code |
-| **Backend** | Core platform logic | APIs, business logic, database | Frontend, Voice Engine |
-| **Database** | Data model and queries | Schema, migrations, queries | Application logic |
-| **Realtime/Voice** | Voice conversation path | Channel gateway, session manager, voice adapter | Control Plane |
-| **Knowledge** | Knowledge lifecycle | Knowledge ingestion, approval, retrieval | Other domains |
-| **Memory** | Memory subsystem | Memory extraction, approval, persistence | Knowledge |
-| **Frontend** | Customer-facing UI | Dashboard, onboarding UI | Backend |
-| **Billing** | Payment integration | Stripe integration, subscription management | Other domains |
-| **Security** | Security controls | Authentication, authorization, encryption | Business logic |
-| **Compliance** | Compliance rules | Compliance evaluation, audit | Business logic |
-| **Localization** | Localization configuration | Language, cultural adaptation | Business logic |
-| **QA** | Test automation | Test suites, test infrastructure | Implementation |
-| **Infrastructure** | Deployment and operations | CI/CD, monitoring, scaling | Application code |
-| **Observability** | Monitoring and alerting | Logging, metrics, tracing | Application code |
-| **Integration** | External provider integration | Provider adapters, webhooks | Business logic |
-| **Code Reviewer** | Code quality review | Code review, quality standards | Implementation |
+StoreVoice is not merely a software engineering project. It is a product, customer experience, commercial proposition, brand, service operation, AI system, managed-service business, European business, compliance-sensitive product, and continuously improving commercial system.
+
+The agent organization covers the **entire product lifecycle**:
+
+```text
+DISCOVER
+  ↓
+DEFINE
+  ↓
+DESIGN
+  ↓
+BUILD
+  ↓
+VERIFY
+  ↓
+LAUNCH
+  ↓
+ACTIVATE
+  ↓
+OPERATE
+  ↓
+MEASURE
+  ↓
+LEARN
+  ↓
+IMPROVE
+  ↓
+VERIFY AGAIN
+```
+
+### Authority Hierarchy
+
+```text
+HUMAN FOUNDER
+      ↓
+APPROVED SOURCE OF TRUTH
+      ↓
+APPROVED ARCHITECTURE
+      ↓
+IMPLEMENTATION BLUEPRINT
+      ↓
+EXISTING TESTED IMPLEMENTATION
+      ↓
+AI RECOMMENDATIONS
+```
+
+AI agents must never become the authority over Founder Decisions.
+
+### Agent Roles — Complete Commercial Product Organization
+
+#### Verification Principle
+
+The organization distinguishes:
+
+* **BUILDERS** — create artifacts
+* **REVIEWERS** — independently verify artifacts
+* **DECISION AUTHORITY** — approves or rejects
+
+No agent may approve its own critical work where independent verification is required.
+
+---
+
+### STRATEGIC CAPABILITIES
+
+| # | Agent | Mission | Owned Areas | Forbidden Areas |
+|---|-------|---------|-------------|-----------------|
+| 1 | **Principal Architect** | Overall architecture coherence | Architecture decisions, system boundaries, contracts, integration boundaries, dependency architecture, technical tradeoffs, architectural review | Implementation code, product decisions |
+| 2 | **Product Manager** | Translate founder decisions into product requirements | Product requirements, feature definition, acceptance criteria, user outcomes, prioritization, scope, product archaeology, product coherence | Founder Decisions, architecture, pricing, brand |
+| 3 | **Product Archaeology** | Reconstruct why existing functionality exists | Inspect existing behavior, discover hidden assumptions, identify historical constraints, preserve valuable existing behavior | Inventing history, modifying implementation |
+
+**Note:** Product Archaeology is a sub-capability of Product Manager. It is activated when existing product behavior must be understood before changes.
+
+---
+
+### CREATIVE CAPABILITIES
+
+| # | Agent | Mission | Owned Areas | Forbidden Areas |
+|---|-------|---------|-------------|-----------------|
+| 4 | **UX / Product Experience** | Customer journeys, interaction flows, usability | Customer journeys, information architecture, interaction design, navigation, task flows, onboarding flows, error/empty/loading states, accessibility considerations, cross-channel experience consistency | Business rules, visual design authority, content authority |
+| 5 | **Visual / Product Design** | Visual language, interface composition, design-system application | Visual direction, interface composition, visual hierarchy, layouts, components, interaction states, visual consistency, responsive behavior, visual polish, design artifacts for implementation | Business rules, content authority, implementation |
+| 6 | **Design System** | Design tokens, typography, spacing, component principles | Design tokens, typography, spacing, color, grid, elevation, iconography, component principles, component states, interaction states, responsive rules, accessibility requirements, motion principles | Business rules, content authority, implementation |
+| 7 | **Brand Direction** | Brand positioning, brand consistency, trust | Brand positioning, brand consistency, visual brand language, verbal brand language, premium positioning, differentiation, trust, consistency across product and marketing | Business rules, implementation |
+| 8 | **Content / Product Copy** | Product language, UX writing, customer-facing copy | Product copy, UX writing, conversion copy, product marketing, onboarding copy, error messaging, trust language, localization-ready content, CTAs, system messages | Business rules, capabilities, pricing, compliance claims |
+
+**Design Pipeline:**
+
+```text
+PRODUCT REQUIREMENT
+        ↓
+UX / PRODUCT EXPERIENCE
+        ↓
+VISUAL / PRODUCT DESIGN
+        ↓
+DESIGN SYSTEM
+        ↓
+CONTENT
+        ↓
+IMPLEMENTATION CONTRACT
+        ↓
+FRONTEND / BACKEND
+```
+
+---
+
+### COMMERCIAL CAPABILITIES
+
+| # | Agent | Mission | Owned Areas | Forbidden Areas |
+|---|-------|---------|-------------|-----------------|
+| 9 | **Commercial / Sales** | Commercial proposition, buyer experience | Commercial proposition, buyer journey, sales journey, lead qualification, enterprise buyer experience, pricing communication, objections, trust, procurement/IT/legal/executive concerns | Product strategy, architecture |
+| 10 | **Growth / CRO** | Conversion optimization, funnel analysis | Conversion optimization, funnel analysis, CTA effectiveness, activation, retention, experimentation, drop-off analysis | Product strategy, brand |
+| 11 | **SEO / Discoverability** | Search discoverability, information architecture for findability | Technical SEO, content SEO, metadata, structured content, search intent, international SEO, localized search | Product UX, brand positioning |
+| 12 | **Website / Public Experience** | Public commercial experience as a product surface | Homepage, product/system explanation, differentiation, industries/use cases, trust/security, investment/pricing, company, enterprise contact, privacy, terms, AI transparency, accessibility | Product strategy, architecture |
+
+---
+
+### CUSTOMER CAPABILITIES
+
+| # | Agent | Mission | Owned Areas | Forbidden Areas |
+|---|-------|---------|-------------|-----------------|
+| 13 | **Customer Onboarding / Activation** | Customer lifecycle from new to active | Onboarding, information collection, validation, configuration, testing, customer confirmation, activation, readiness assessment | Product strategy, architecture |
+| 14 | **Customer Success / Service Operations** | Ongoing customer service delivery | Customer success, service responsibility, customer communication, operational changes, support, service health, escalation management, periodic reporting, improvement recommendations | Product strategy, architecture |
+| 15 | **Knowledge Operations** | Customer knowledge lifecycle | Customer information collection, source validation, approval, knowledge versioning, knowledge lifecycle, knowledge updates, knowledge gaps, knowledge conflicts, knowledge deletion, customer confirmation | Other domains |
+| 16 | **Memory Operations** | AI memory lifecycle | Memory candidate extraction, relevance, permissions, retrieval, conflict resolution, source/confidence, deletion, tenant isolation, auditability, lifecycle management | Knowledge, other domains |
+| 17 | **Human Escalation / White Glove** | Escalation and premium service delivery | Human escalation, escalation reasons, cold/warm transfer, context handover, human responsibility, operational/customer/incident escalation, White Glove service delivery | Product strategy, architecture |
+
+**Customer Lifecycle:**
+
+```text
+NEW CUSTOMER
+    ↓
+ONBOARDING
+    ↓
+INFORMATION COLLECTION
+    ↓
+VALIDATION
+    ↓
+CONFIGURATION
+    ↓
+TEST
+    ↓
+CUSTOMER CONFIRMATION
+    ↓
+ACTIVATION
+    ↓
+OPERATION
+    ↓
+MEASUREMENT
+    ↓
+IMPROVEMENT
+```
+
+Required states: DRAFT → REVIEW REQUIRED → CUSTOMER CONFIRMED → ACTIVE
+
+Important settings must NOT silently activate.
+
+---
+
+### TECHNICAL CAPABILITIES — ENGINEERING
+
+The existing 17 engineering roles are preserved. Do NOT remove them.
+
+| # | Agent | Mission | Owned Areas | Forbidden Areas |
+|---|-------|---------|-------------|-----------------|
+| 18 | **Orchestrator** | Task dispatch and coordination | Task management, agent coordination, dependency resolution, context propagation, handoffs, artifact exchange, parallel/sequential execution, failure detection, revision loops, escalation, completion criteria, status reporting, traceability, auditability | Implementation code, product decisions, design authority, brand authority |
+| 19 | **Backend** | Core platform logic | APIs, business logic, database | Frontend, Voice Engine |
+| 20 | **Database** | Data model and queries | Schema, migrations, queries | Application logic |
+| 21 | **Realtime/Voice** | Voice conversation path | Channel gateway, session manager, voice adapter | Control Plane |
+| 22 | **Knowledge** (Engineering) | Knowledge system implementation | Knowledge ingestion, approval, retrieval system | Other domains |
+| 23 | **Memory** (Engineering) | Memory system implementation | Memory extraction, approval, persistence system | Knowledge |
+| 24 | **Frontend** | Customer-facing UI implementation | Dashboard, onboarding UI, component engineering, responsive implementation | Backend, design authority |
+| 25 | **Billing** | Payment integration | Stripe integration, subscription management | Other domains |
+| 26 | **Security** (Engineering) | Security controls implementation | Authentication, authorization, encryption | Business logic |
+| 27 | **Compliance** (Engineering) | Compliance system implementation | Compliance evaluation, audit system | Business logic |
+| 28 | **Localization** (Engineering) | Localization system implementation | Language, cultural adaptation system | Business logic |
+| 29 | **Infrastructure** | Deployment and operations | CI/CD, monitoring, scaling | Application code |
+| 30 | **Observability** | Monitoring and alerting | Logging, metrics, tracing | Application code |
+| 31 | **Integration** | External provider integration | Provider adapters, webhooks | Business logic |
+| 32 | **Code Reviewer** | Code quality review | Code review, quality standards | Implementation |
+
+---
+
+### TRUST / COMPLIANCE CAPABILITIES
+
+| # | Agent | Mission | Owned Areas | Forbidden Areas |
+|---|-------|---------|-------------|-----------------|
+| 33 | **Security / Privacy / Compliance / Trust** | Trust, compliance, privacy, AI transparency | Security, privacy, GDPR, data protection, AI transparency, accessibility, regulatory requirements, jurisdiction, auditability, retention, deletion, data isolation, incident response, responsible AI | Product strategy, business rules |
+
+**Note:** This capability covers trust, compliance, privacy, and AI transparency as a unified concern because they are inseparable in a European AI service. Separate specialist functions may be activated within this capability as needed.
+
+**AI Transparency Audit:**
+
+* live voice demos
+* AI voice identity
+* chatbots
+* AI-generated content
+* website AI interactions
+* disclosure wording
+* accessibility of disclosure
+* timing of disclosure
+* distinguishability from human interaction
+
+Do not claim "Fully EU AI Act compliant" unless independently substantiated.
+
+---
+
+### LOCALIZATION CAPABILITY
+
+| # | Agent | Mission | Owned Areas | Forbidden Areas |
+|---|-------|---------|-------------|-----------------|
+| 34 | **Localization** (Product) | European customer experience | Language, locale, accent, terminology, cultural expectations, formality, local customer experience, local website, local sales experience, European expansion, jurisdiction-aware behavior | Business rules, architecture |
+
+Internal company language remains English. Do not create unnecessary country-specific architectures.
+
+---
+
+### ANALYTICS CAPABILITY
+
+| # | Agent | Mission | Owned Areas | Forbidden Areas |
+|---|-------|---------|-------------|-----------------|
+| 35 | **Analytics / Measurement** | Product and operational measurement | Product usage, conversion, activation, onboarding, customer experience, call outcomes, escalation, knowledge gaps, quality, retention, commercial performance, operational performance, system performance | Product strategy, architecture |
+
+Metrics must support decisions. Avoid vanity metrics.
+
+---
+
+### VERIFICATION CAPABILITIES
+
+| # | Agent | Mission | Owned Areas | Forbidden Areas |
+|---|-------|---------|-------------|-----------------|
+| 36 | **QA** | Functional test automation, visual/UX verification | Test suites, test infrastructure, design-system conformance, visual/UX verification, accessibility testing, critical user journey verification, visual regression detection | Implementation |
+| 37 | **Red Team / Commercial Judge** | Independent challenge and commercial evaluation | Break product assumptions, UX, positioning, commercial logic, security, compliance, accessibility, operational assumptions, AI behavior, customer trust; evaluate would a real customer buy this? | Implementation, product authority |
+| 38 | **Innovation Scout** | Improvement proposals | UX opportunities, design improvements, conversion opportunities, onboarding improvements, retention opportunities, new product opportunities, SEO opportunities, accessibility, performance, trust, European expansion | Implementation, product authority |
+| 39 | **Product / Commercial Audit** | Recurring multi-dimensional audit | PRODUCT, UX, UI, BRAND, COPY, COMMERCIAL, MOBILE, ACCESSIBILITY, PERFORMANCE, SEO, SECURITY, TECHNICAL QUALITY, EUROPEAN READINESS, CUSTOMER EXPERIENCE, OPERATIONS, TRUST | Implementation |
+
+**Independent Verification Model:**
+
+```text
+BUILDERS create artifacts
+      ↓
+REVIEWERS independently verify:
+  - QA (functional + visual/UX)
+  - Red Team (challenge assumptions)
+  - Commercial Judge (would a customer buy this?)
+  - Code Reviewer (code quality)
+      ↓
+DECISION AUTHORITY approves or rejects
+      ↓
+FOUNDER resolves strategic conflicts
+```
+
+Reviewers must be empowered to reject work.
+
+---
+
+### ORCHESTRATION CAPABILITY
+
+| # | Agent | Mission | Owned Areas | Forbidden Areas |
+|---|-------|---------|-------------|-----------------|
+| 40 | **Orchestrator** | Operational coordination across all capabilities | Task decomposition, role selection, context propagation, dependency management, parallel/sequential work, handoffs, artifact exchange, revision loops, failure handling, escalation, independent verification coordination, rollback, audit trail | Implementation code, product decisions, design authority, brand authority |
+
+The Orchestrator coordinates.
+
+It does not govern.
+
+---
 
 ### Agent Access Rules
 
 1. **Least-privilege access:** Each agent has access only to its owned areas
 2. **Read-only for non-owned:** Agents can read but not write to non-owned areas
 3. **Escalation required:** Changes to non-owned areas require escalation
-4. **Review required:** All changes require code review before merge
+4. **Review required:** All changes require independent verification before merge
+5. **Design authority:** Visual/Product Design owns design authority; Frontend implements approved design (FD-11)
+6. **Content authority:** Content owns product copy; agents must not invent product truth (FD-13)
+7. **Product authority:** Product Manager owns product requirements; agents must not invent requirements (FD-14)
+8. **No self-approval:** No agent may approve its own critical work where independent verification is required
 
----
+### Role Relationships
 
-## SECTION AC — OPENCODE EXECUTION MODEL
-
-### Execution Flow
-
+```text
+FOUNDER / SOURCE OF TRUTH
+          ↓
+     ORCHESTRATOR
+          ↓
+ PRODUCT MANAGER
+          ↓
+   ┌──────┼──────────┬──────────┐
+   ↓      ↓          ↓          ↓
+  UX    DESIGN    CONTENT   COMMERCIAL
+   ↓      ↓          ↓          ↓
+ VISUAL   │          │       GROWTH/SEO
+   ↓      │          │          ↓
+ DESIGN SYSTEM       │       WEBSITE
+   ↓      │          │          ↓
+ FRONTEND ←──────────┘──────────┘
+          ↓
+   CUSTOMER ONBOARDING / SUCCESS
+          ↓
+   KNOWLEDGE / MEMORY OPS
+          ↓
+         QA
+          ↓
+   RED TEAM / COMMERCIAL JUDGE
+          ↓
+    CODE REVIEWER
+          ↓
+    ACCEPTANCE
+          ↓
+       FREEZE
 ```
-SOURCE OF TRUTH
-    ↓
-TASK SPECIFICATION (from this blueprint)
-    ↓
-AGENT (selected based on task type)
-    ↓
-IMPLEMENTATION (code, tests, documentation)
-    ↓
-TEST (automated test suite)
-    ↓
-REVIEW (code review)
-    ↓
-COMMIT (with clear message)
+
+### Authority Model
+
+```text`
+FOUNDER
+   ↓
+defines STRATEGIC TRUTH and BOUNDARIES
+
+PRODUCT MANAGER
+   ↓
+defines WHAT and WHY
+
+ARCHITECTURE (Principal Architect)
+   ↓
+defines HOW at system level
+
+UX / DESIGN / BRAND / CONTENT
+   ↓
+define EXPERIENCE and COMMUNICATION
+
+COMMERCIAL / GROWTH / SEO / WEBSITE
+   ↓
+define MARKET and CONVERSION
+
+CUSTOMER OPS (Onboarding / Success / Knowledge / Memory / Escalation)
+   ↓
+define SERVICE DELIVERY
+
+ENGINEERING (17 roles)
+   ↓
+implements
+
+TRUST / COMPLIANCE / LOCALIZATION / ANALYTICS
+   ↓
+protects and measures
+
+QA / RED TEAM / CODE REVIEWER
+   ↓
+independently verifies
+
+FOUNDER
+   ↓
+resolves strategic conflicts
 ```
 
-### Agent Context
+### Context Propagation Model
 
-Agents obtain authoritative context from:
+Every dispatched task must receive the minimum authoritative context required to perform the task correctly.
 
-1. **This blueprint** (implementation specifications)
-2. **Source of Truth** (business rules, founder decisions)
-3. **Architecture documents** (design specifications)
-4. **Test results** (validation feedback)
+Context must include at minimum:
+
+* Founder Decisions (from FOUNDER_DECISION_SET.md)
+* Product Contract (from PRODUCT_CONTRACT.md)
+* Business Rules (from BUSINESS_RULES.md)
+* Architecture (from ARCHITECTURE.md)
+* Design System (from DESIGN_SYSTEM.md — when established)
+* UX Rules (from UX_RULES.md)
+* Brand Guidelines (from BRAND_GUIDELINES.md — when established)
+* Voice Engine constraints (from VOICE_ENGINE.md, FROZEN_COMPONENTS.md)
+* Implementation Blueprint (this document)
+* current task specification
+* dependencies
+* prior findings
+* acceptance criteria
+* known assumptions
+* technical unknowns
+* relevant artifacts
+* prior agent outputs
+
+Agents must not be forced to reconstruct project truth from conversation history alone.
+
+Persistent project truth must come from repository artifacts.
+
+### Handoff Model
+
+A structured handoff must communicate, where relevant:
+
+```text
+TASK
+OBJECTIVE
+AUTHORITY
+INPUTS
+DEPENDENCIES
+DECISIONS
+ASSUMPTIONS
+ARTIFACTS
+FINDINGS
+OPEN QUESTIONS
+RISKS
+ACCEPTANCE CRITERIA
+NEXT OWNER
+STATUS
+```
+
+Do not allow informal prose-only handoffs to become the sole project memory.
+
+### Dependency Model
+
+Work may be:
+
+**Sequential** — One output required before another agent begins.
+
+Example:
+```text
+Product Requirements → UX → Visual Design → Frontend
+```
+
+**Parallel** — Independent workstreams operating simultaneously.
+
+Example:
+```text
+Backend │ Database │ Security │ Observability
+```
+
+**Gated** — Downstream implementation waits for approval or validation.
+
+Example:
+```text
+Design System → Design → Frontend → Visual QA
+```
+
+The Orchestrator must understand these dependency types.
+
+### Revision Loop
+
+When an agent's work fails validation:
+
+```text
+BUILD
+ ↓
+TEST
+ ↓
+AUDIT
+ ↓
+FAIL
+ ↓
+IDENTIFY FAILURE OWNER
+ ↓
+RETURN CONTEXT + FINDINGS
+ ↓
+REVISE
+ ↓
+RETEST
+ ↓
+RE-AUDIT
+```
+
+Do not restart unrelated work.
+
+Do not erase the failure history.
+
+Do not allow an agent to declare its own failed work complete.
+
+### Failure Handling
+
+Failure classes:
+
+* **Technical Failure** — Agent/tool/code failure
+* **Requirement Failure** — Output does not satisfy requirements
+* **Architectural Failure** — Output conflicts with architecture
+* **Product Failure** — Output does not satisfy product intent
+* **Design Failure** — Output violates approved design direction
+* **Content Failure** — Copy contradicts product truth or content standards
+* **Security/Compliance Failure** — Output violates mandatory security or compliance requirements
+* **Integration Failure** — Output conflicts with another system/component
+* **Commercial Failure** — Output weakens positioning, harms conversion, confuses users, damages trust
+* **Unknown** — Issue cannot safely be classified
+
+Unknown or authority-conflicting failures must escalate rather than being guessed through.
+
+### Authority Escalation
+
+If an agent encounters:
+
+* conflicting Founder Decisions
+* missing Founder Decision
+* conflicting business rules
+* architectural contradiction
+* unresolved product strategy
+* material commercial ambiguity
+* major design-direction ambiguity
+* compliance uncertainty
+* security uncertainty
+
+the agent must NOT invent the answer.
+
+Use:
+
+**STOP → IDENTIFY → DOCUMENT → ESCALATE**
+
+The Orchestrator must surface the issue to the correct authority.
+
+### Traceability
+
+Every major implementation task must eventually be traceable:
+
+```text
+FOUNDER DECISION
+      ↓
+PRODUCT REQUIREMENT
+      ↓
+UX REQUIREMENT
+      ↓
+DESIGN DECISION
+      ↓
+CONTENT DECISION
+      ↓
+ARCHITECTURE
+      ↓
+IMPLEMENTATION
+      ↓
+TEST
+      ↓
+QA / VISUAL UX QA
+      ↓
+RED TEAM / COMMERCIAL JUDGE
+      ↓
+CODE REVIEW
+      ↓
+ACCEPTANCE
+```
+
+Not every task will require every layer. The operating model must nevertheless preserve the ability to trace decisions through the system.
+
+### No Fabrication Rule
+
+The organization preserves a strict public-truth rule.
+
+Never fabricate:
+
+* customers, logos, reviews, testimonials, case studies
+* statistics, certifications, awards, partnerships
+* legal entities, addresses, security controls
+* compliance claims, SLA guarantees, uptime guarantees
+* data residency, subprocessors, retention periods
+* DPO information, founder history, press coverage
+
+If unknown:
+
+```text
+STATUS: OPEN
+```
+
+Create a TODO for the appropriate owner.
+
+### Commercial Quality Must Not Be Subordinate to Engineering
+
+A technically perfect product can still fail commercially.
+
+```text
+TECHNICALLY CORRECT
+≠
+PRODUCT GOOD
+≠
+UX GOOD
+≠
+COMMERCIAL GOOD
+```
+
+The system must be capable of rejecting technically correct work that:
+
+* weakens positioning
+* harms conversion
+* confuses users
+* damages trust
+* violates brand
+* creates poor UX
+* creates commercial incoherence
+
+### Design Autopilot
+
+Preserve the concept of an autonomous design improvement loop:
+
+```text
+INSPECT CURRENT DESIGN
+        ↓
+IDENTIFY PROBLEM
+        ↓
+CREATE PROPOSAL
+        ↓
+IMPLEMENT
+        ↓
+VISUAL REGRESSION
+        ↓
+UX REVIEW
+        ↓
+BRAND REVIEW
+        ↓
+ACCESSIBILITY REVIEW
+        ↓
+COMPARE BEFORE / AFTER
+        ↓
+KEEP IF BETTER
+REVERT IF WORSE
+```
+
+Never preserve inferior design merely because it was original.
+
+Never sacrifice functionality for aesthetics.
+
+### Continuous Improvement Loop
+
+Define the canonical autonomous loop:
+
+```text
+AUDIT
+  ↓
+DISCOVER
+  ↓
+PROPOSE
+  ↓
+PRIORITIZE
+  ↓
+SELECT
+  ↓
+IMPLEMENT
+  ↓
+TEST
+  ↓
+REVIEW
+  ↓
+RED TEAM
+  ↓
+VALIDATE
+  ↓
+MERGE OR ROLLBACK
+  ↓
+UPDATE MEMORY
+  ↓
+AUDIT AGAIN
+```
+
+This loop must respect authority hierarchy and change control.
 
 ### Deterministic Task Dispatch
 
 | Task Type | Agent | Input | Output |
 |-----------|-------|-------|--------|
+| Product requirement | Product Manager | Founder Decision / strategic direction | Product requirement, acceptance criteria |
+| Customer journey | UX | Product requirement | Journey specification, interaction flow |
+| Visual design | Visual Design | UX specification, design system | Design artifact, component specification |
+| Content / copy | Content | Product requirement, brand guidelines | Copy artifact, content specification |
 | Database schema | Database | Entity definition | Migration script |
 | API endpoint | Backend | API specification | Implementation code |
 | Event handler | Backend | Event specification | Handler code |
 | Test case | QA | Acceptance criteria | Test code |
+| Visual/UX QA | QA | Design artifact, implementation | Visual/UX verification report |
 | Security control | Security | Security requirement | Implementation code |
 | Knowledge feature | Knowledge | Knowledge specification | Implementation code |
 | Voice path | Realtime/Voice | Call path specification | Implementation code |
 | Billing feature | Billing | Billing specification | Implementation code |
-
-### Agent Handoff Artifacts
-
-Between agents, the following artifacts are persisted:
-
-1. **Implementation code** (committed to repository)
-2. **Test results** (automated test output)
-3. **Design decisions** (documented in code comments)
-4. **API contracts** (OpenAPI specifications)
-5. **Database migrations** (migration scripts)
+| Commercial evaluation | Red Team / Commercial Judge | Product artifact | Commercial assessment |
+| Innovation proposal | Innovation Scout | Current state | Improvement proposal |
+| Product audit | Product / Commercial Audit | Current state | Audit report |
 
 ---
 
