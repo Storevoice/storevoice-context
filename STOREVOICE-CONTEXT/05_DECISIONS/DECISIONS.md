@@ -21,6 +21,12 @@
 | 2026-09-04 | Demo experience established | Product | APPROVED | Change 002 | 30-second demo with website information |
 | 2026-09-04 | Knowledge boundaries established | Technical | APPROVED | Change 002 | AI never invents company knowledge |
 | 2026-09-04 | Human escalation principles established | Product | APPROVED | Change 002 | Transfer must have value for both sides |
+| 2026-09-04 | Engine Modification Policy (FQ-01) | Architecture | APPROVED | Change 004B | Voice Engine remains frozen by default; modification permitted only through explicit human-approved architectural change |
+| 2026-09-04 | Engine Replacement Policy (FQ-02) | Architecture | APPROVED | Change 004B | Voice Engine is replaceable behind a stable platform boundary; replacement requires explicit human approval |
+| 2026-09-04 | European Language Scope (FQ-05) | Architecture | APPROVED | Change 004B | Architecture must be capable of supporting all European languages and localized customer experiences |
+| 2026-09-04 | White Glove Service Scope (FQ-07) | Business | APPROVED | Change 004B | White Glove provides 24/7 human responsibility and escalation, not mandatory 24/7 live staffing |
+| 2026-09-04 | Customer Knowledge Ownership (FQ-08) | Architecture | APPROVED | Change 004B | Customer-specific knowledge is deleted after termination; StoreVoice may retain genuinely non-identifiable, aggregated/general insights |
+| 2026-09-04 | Demo Conversion Policy (FQ-09) | Product | APPROVED | Change 004B | Demo instances are temporary by design (approximately 48 hours default); lifecycle must be measurable and configurable |
 
 ---
 
@@ -72,4 +78,4 @@ When recording a new decision:
 ---
 
 **Last Updated:** 2026-09-04
-**Approved By:** Change 002 — Establish StoreVoice Vision and AI Colleague Philosophy
+**Approved By:** Change 004B — Freeze Founder Architecture Decisions

@@ -28,6 +28,10 @@
 | 2026-09-04 | 05_DECISIONS/ARCHITECTURE_FOUNDER_QUESTIONS.md | CREATED | Questions requiring Founder authority | Change 003C |
 | 2026-09-04 | 05_DECISIONS/ARCHITECTURE_DECISION_PACKAGES.md | CREATED | Organized decision packages for systematic decision-making | Change 004A |
 | 2026-09-04 | 05_DECISIONS/OPEN_DECISIONS.md | UPDATED | Cross-referenced architecture decisions | Change 004A |
+| 2026-09-04 | 05_DECISIONS/ARCHITECTURE_FOUNDER_QUESTIONS.md | UPDATED | Resolved 6 Founder questions, updated status to DECISION | Change 004B |
+| 2026-09-04 | 05_DECISIONS/ARCHITECTURE_DECISION_REGISTER.md | UPDATED | Traced 18 decisions to frozen Founder decisions | Change 004B |
+| 2026-09-04 | 05_DECISIONS/DECISIONS.md | UPDATED | Recorded 6 Founder-authorized architecture decisions | Change 004B |
+| 05_DECISIONS/FOUNDER_DECISION_TO_PLATFORM_REQUIREMENTS.md | UPDATED | Added frozen Founder decisions to 6 platform requirements sections | Change 004B |
 
 ---
 
@@ -65,4 +69,4 @@ When recording a new change:
 ---
 
 **Last Updated:** 2026-09-04
-**Approved By:** Change 004A — Architecture Decision Review & Decision Packages
+**Approved By:** Change 004B — Freeze Founder Architecture Decisions

@@ -10,6 +10,19 @@
 
 ---
 
+## Frozen Founder Decisions (Change 004B)
+
+The following Founder decisions have been frozen during Architecture Decision Session 004B:
+
+* **FQ-01 — Engine Modification Policy:** Voice Engine remains frozen by default; modification permitted only through explicit human-approved architectural change when required capability cannot reasonably be implemented outside the engine without compromising correctness, performance, maintainability, or product requirements.
+* **FQ-02 — Engine Replacement Policy:** Voice Engine is replaceable, but the StoreVoice platform contract is not; architecture must maintain a clean Voice Engine boundary/interface; replacement requires explicit human approval.
+* **FQ-05 — European Language Scope:** Architecture must be capable of supporting all European languages and localized customer experiences; individual languages and markets may be rolled out progressively; localization includes more than translation.
+* **FQ-07 — White Glove Service Scope:** White Glove provides 24/7 human responsibility and escalation, not mandatory 24/7 live staffing; when immediate human intervention is required outside human availability, the AI must handle the situation safely, preserve relevant context, and arrange appropriate human follow-up/callback.
+* **FQ-08 — Customer Knowledge Ownership:** Customer-specific knowledge is deleted after termination; StoreVoice may retain genuinely non-identifiable, aggregated/general insights; architecture must maintain hard distinction between tenant/customer data and StoreVoice-owned general learning.
+* **FQ-09 — Demo Conversion Policy:** Demo instances are temporary by design (approximately 48 hours default); lifecycle must be measurable and configurable; no assumed conversion rate becomes a hard architectural constraint.
+
+---
+
 ## Decision Categories
 
 ### A. Platform Boundary
@@ -17,19 +30,19 @@
 | ID | Decision Area | Question | Why It Matters | Source | Current State | Options | Decision Owner | Blocking? |
 |----|---------------|----------|----------------|--------|---------------|---------|----------------|-----------|
 | PB-01 | Platform Scope | What capabilities belong to the StoreVoice Platform vs. external providers? | Defines system boundaries and responsibilities | Founder Decision 6.1, 6.3 | OPEN | Platform-only / Platform + integrations / Hybrid | Founder | YES |
-| PB-02 | Voice Engine Role | What is the relationship between the StoreVoice Platform and the frozen Voice Engine? | Determines integration pattern and modification needs | Founder Decision 6.5, Frozen Engine Constraint | OPEN | Engine as black box / Engine as component / Engine as reference | Founder | YES |
+| PB-02 | Voice Engine Role | What is the relationship between the StoreVoice Platform and the frozen Voice Engine? | Determines integration pattern and modification needs | Founder Decision 6.5, FQ-02 (Frozen) | FQ-02 DECIDED: Engine is replaceable behind stable platform boundary | Engine as black box / Engine as component / Engine as reference | Founder | YES |
 | PB-03 | Operational Boundaries | What capabilities require human/operational processes vs. technical automation? | Defines automation vs. human intervention boundaries | Founder Decision 6.6, 6.7 | OPEN | Fully automated / Human-in-the-loop / Hybrid | Founder | NO |
 
 ### B. Voice Engine Boundary
 
 | ID | Decision Area | Question | Why It Matters | Source | Current State | Options | Decision Owner | Blocking? |
 |----|---------------|----------|----------------|--------|---------------|---------|----------------|-----------|
-| VE-01 | Engine Modification | Under what conditions, if any, may the frozen Voice Engine be modified? | Determines whether engine changes are possible | Frozen Engine Constraint, Founder Decision 6.9 | OPEN | Permanently frozen / Conditionally modifiable / Replaceable | Founder | YES |
-| VE-02 | Persona Configuration | How will customer-configurable personas be supported? | Current persona is hardcoded in prompts | Capability Gap: AI Colleague Behavior | OPEN | Engine modification / Platform-level injection / External configuration | Founder | YES |
-| VE-03 | Language Expansion | How will all European languages be supported beyond the current 4? | Current engine supports en, nl, fr, de | Capability Gap: Localization | OPEN | Engine modification / Multiple engine instances / Platform-level language handling | Founder | YES |
-| VE-04 | Context Persistence | How will persistent context across sessions be achieved? | Current context is session-only | Capability Gap: AI Colleague Behavior | OPEN | Engine modification / Platform-level context store / Hybrid | Founder | YES |
-| VE-05 | Memory System | How will memory between sessions be implemented? | Currently no memory exists | Capability Gap: AI Colleague Behavior | OPEN | Engine modification / Platform-level memory / External memory system | Founder | YES |
-| VE-06 | Emotion Handling | How will enhanced emotion recognition and response be implemented? | Currently basic or non-existent | Capability Gap: AI Colleague Behavior | OPEN | Engine modification / Platform-level emotion processing / External service | Founder | NO |
+| VE-01 | Engine Modification | Under what conditions, if any, may the frozen Voice Engine be modified? | Determines whether engine changes are possible | Frozen Engine Constraint, Founder Decision 6.9, FQ-01 (Frozen) | FQ-01 DECIDED: Frozen by default; modification permitted only through explicit human-approved architectural change when required capability cannot reasonably be implemented outside the engine | Permanently frozen / Conditionally modifiable / Replaceable | Founder | YES |
+| VE-02 | Persona Configuration | How will customer-configurable personas be supported? | Current persona is hardcoded in prompts | Capability Gap: AI Colleague Behavior, FQ-01 (Frozen) | FQ-01 DECIDED: Modification permitted only when capability cannot reasonably be implemented outside the engine | Engine modification / Platform-level injection / External configuration | Founder | YES |
+| VE-03 | Language Expansion | How will all European languages be supported beyond the current 4? | Current engine supports en, nl, fr, de | Capability Gap: Localization, FQ-05 (Frozen), FQ-01 (Frozen) | FQ-05 DECIDED: Architecture must support all European languages; FQ-01 DECIDED: Modification permitted only when capability cannot reasonably be implemented outside the engine | Engine modification / Multiple engine instances / Platform-level language handling | Founder | YES |
+| VE-04 | Context Persistence | How will persistent context across sessions be achieved? | Current context is session-only | Capability Gap: AI Colleague Behavior, FQ-01 (Frozen) | FQ-01 DECIDED: Modification permitted only when capability cannot reasonably be implemented outside the engine | Engine modification / Platform-level context store / Hybrid | Founder | YES |
+| VE-05 | Memory System | How will memory between sessions be implemented? | Currently no memory exists | Capability Gap: AI Colleague Behavior, FQ-01 (Frozen) | FQ-01 DECIDED: Modification permitted only when capability cannot reasonably be implemented outside the engine | Engine modification / Platform-level memory / External memory system | Founder | YES |
+| VE-06 | Emotion Handling | How will enhanced emotion recognition and response be implemented? | Currently basic or non-existent | Capability Gap: AI Colleague Behavior, FQ-01 (Frozen) | FQ-01 DECIDED: Modification permitted only when capability cannot reasonably be implemented outside the engine | Engine modification / Platform-level emotion processing / External service | Founder | NO |
 
 ### C. Tenant Isolation
 
@@ -58,7 +71,7 @@
 | KA-02 | Knowledge Versioning | How will knowledge versions be managed? | Supports audit trail and conflict resolution | Founder Decision 6.13 | OPEN | Immutable versions / Mutable with history / Hybrid | Founder | YES |
 | KA-03 | Approval Workflow | How will knowledge approval be managed? | Ensures knowledge quality and correctness | Founder Decision 6.11, 6.12 | OPEN | Manual approval / Automated validation / Hybrid | Founder | YES |
 | KA-04 | Conflict Resolution | How will conflicting information be detected and resolved? | Prevents AI from making arbitrary decisions | Founder Decision 6.12 | OPEN | Customer-resolved / StoreVoice-resolved / Hybrid | Founder | YES |
-| KA-05 | Knowledge Deletion | How will knowledge deletion be implemented? | Supports customer exit requirements | Founder Decision 6.20 | OPEN | Soft delete / Hard delete / Hybrid | Founder | NO |
+| KA-05 | Knowledge Deletion | How will knowledge deletion be implemented? | Supports customer exit requirements | Founder Decision 6.20, FQ-08 (Frozen) | FQ-08 DECIDED: Customer-specific knowledge is deleted after termination; StoreVoice may retain genuinely non-identifiable, aggregated/general insights | Soft delete / Hard delete / Hybrid | Founder | NO |
 | KA-06 | Knowledge Audit | How will knowledge changes be audited? | Supports compliance and incident investigation | Founder Decision 6.13 | OPEN | Append-only log / Event sourcing / Hybrid | Founder | NO |
 
 ### F. AI Colleague Runtime
@@ -75,10 +88,10 @@
 
 | ID | Decision Area | Question | Why It Matters | Source | Current State | Options | Decision Owner | Blocking? |
 |----|---------------|----------|----------------|--------|---------------|---------|----------------|-----------|
-| LA-01 | Localization Scope | What aspects of the experience require localization? | Defines breadth of localization effort | Founder Decision 6.4 | OPEN | Language-only / Full cultural adaptation / Hybrid | Founder | YES |
-| LA-02 | Language Support | Which European languages must be supported? | Defines language coverage requirements | Founder Decision 6.4 | OPEN | All EU languages / Major languages / Phased approach | Founder | YES |
-| LA-03 | Cultural Adaptation | How will cultural adaptation be implemented beyond translation? | Ensures native-feeling experience | Founder Decision 6.4 | OPEN | Template-based / Custom per country / Hybrid | Founder | NO |
-| LA-04 | Localized Content | How will customer-facing documentation, invoices, and reports be localized? | Supports complete localized experience | Founder Decision 6.4 | OPEN | Template system / Dynamic generation / Hybrid | Founder | NO |
+| LA-01 | Localization Scope | What aspects of the experience require localization? | Defines breadth of localization effort | Founder Decision 6.4, FQ-05 (Frozen) | FQ-05 DECIDED: Architecture must support all European languages and localized customer experiences; localization includes more than translation | Language-only / Full cultural adaptation / Hybrid | Founder | YES |
+| LA-02 | Language Support | Which European languages must be supported? | Defines language coverage requirements | Founder Decision 6.4, FQ-05 (Frozen) | FQ-05 DECIDED: Architecture must support all European languages; individual languages may be rolled out progressively | All EU languages / Major languages / Phased approach | Founder | YES |
+| LA-03 | Cultural Adaptation | How will cultural adaptation be implemented beyond translation? | Ensures native-feeling experience | Founder Decision 6.4, FQ-05 (Frozen) | FQ-05 DECIDED: Localization includes more than translation; architecture must allow country-specific language, wording, communication style, formality, cultural behavior, customer-facing experience | Template-based / Custom per country / Hybrid | Founder | NO |
+| LA-04 | Localized Content | How will customer-facing documentation, invoices, and reports be localized? | Supports complete localized experience | Founder Decision 6.4, FQ-05 (Frozen) | FQ-05 DECIDED: Architecture must support country-specific customer-facing experience | Template system / Dynamic generation / Hybrid | Founder | NO |
 
 ### H. Channel Architecture
 
@@ -92,11 +105,11 @@
 
 | ID | Decision Area | Question | Why It Matters | Source | Current State | Options | Decision Owner | Blocking? |
 |----|---------------|----------|----------------|--------|---------------|---------|----------------|-----------|
-| HE-01 | Escalation Rules | How will escalation rules be defined and enforced? | Determines when human intervention occurs | Founder Decision 6.7 | OPEN | Rule-based / ML-based / Hybrid | Founder | YES |
-| HE-02 | Human Availability | How will human availability be tracked? | Determines escalation routing | Founder Decision 6.7 | OPEN | Schedule-based / Real-time / Hybrid | Founder | NO |
+| HE-01 | Escalation Rules | How will escalation rules be defined and enforced? | Determines when human intervention occurs | Founder Decision 6.7, FQ-07 (Frozen) | FQ-07 DECIDED: White Glove provides 24/7 human responsibility and escalation, not mandatory 24/7 live staffing | Rule-based / ML-based / Hybrid | Founder | YES |
+| HE-02 | Human Availability | How will human availability be tracked? | Determines escalation routing | Founder Decision 6.7, FQ-07 (Frozen) | FQ-07 DECIDED: When immediate human intervention is required outside human availability, the AI must handle the situation safely, preserve relevant context, and arrange appropriate human follow-up/callback | Schedule-based / Real-time / Hybrid | Founder | NO |
 | HE-03 | Transfer Mechanisms | How will cold/warm transfers be implemented? | Defines transfer capabilities | Founder Decision 6.7 | OPEN | Telephony-based / Application-based / Hybrid | Founder | NO |
-| HE-04 | Callback System | How will callback scheduling be implemented? | Supports after-hours escalation | Founder Decision 6.7 | OPEN | Manual scheduling / Automated / Hybrid | Founder | NO |
-| HE-05 | Context Handoff | How will context be handed off during escalation? | Prevents customer from repeating information | Founder Decision 6.7 | OPEN | Summary-based / Full context / Hybrid | Founder | NO |
+| HE-04 | Callback System | How will callback scheduling be implemented? | Supports after-hours escalation | Founder Decision 6.7, FQ-07 (Frozen) | FQ-07 DECIDED: When immediate human intervention is required outside human availability, the AI must arrange appropriate human follow-up/callback | Manual scheduling / Automated / Hybrid | Founder | NO |
+| HE-05 | Context Handoff | How will context be handed off during escalation? | Prevents customer from repeating information | Founder Decision 6.7, FQ-07 (Frozen) | FQ-07 DECIDED: The AI must preserve relevant context during escalation | Summary-based / Full context / Hybrid | Founder | NO |
 
 ### J. Customer Lifecycle
 
@@ -126,8 +139,8 @@
 |----|---------------|----------|----------------|--------|---------------|---------|----------------|-----------|
 | DM-01 | Website Ingestion | How will prospect websites be ingested for demo creation? | Enables automated demo setup | Founder Decision 6.29 | OPEN | Scraping / API-based / Manual / Hybrid | Founder | YES |
 | DM-02 | Demo Isolation | How will demo instances be isolated from production? | Prevents demo impact on production | Founder Decision 6.29 | OPEN | Separate infrastructure / Logical isolation / Hybrid | Founder | YES |
-| DM-03 | Demo Expiration | How will demo expiration be managed? | Supports commercial process | Founder Decision 6.29 | OPEN | Time-based / Activity-based / Hybrid | Founder | NO |
-| DM-04 | Conversion Process | How will demo-to-customer conversion be managed? | Supports sales process | Founder Decision 6.29 | OPEN | Manual / Automated / Hybrid | Founder | NO |
+| DM-03 | Demo Expiration | How will demo expiration be managed? | Supports commercial process | Founder Decision 6.29, FQ-09 (Frozen) | FQ-09 DECIDED: Demo instances are temporary by design (approximately 48 hours default); lifecycle must be measurable and configurable | Time-based / Activity-based / Hybrid | Founder | NO |
+| DM-04 | Conversion Process | How will demo-to-customer conversion be managed? | Supports sales process | Founder Decision 6.29, FQ-09 (Frozen) | FQ-09 DECIDED: No assumed conversion rate becomes a hard architectural constraint; conversion rate is a commercial metric that may change over time | Manual / Automated / Hybrid | Founder | NO |
 
 ### M. Billing and Commercial Architecture
 
@@ -170,10 +183,10 @@
 
 | ID | Decision Area | Question | Why It Matters | Source | Current State | Options | Decision Owner | Blocking? |
 |----|---------------|----------|----------------|--------|---------------|---------|----------------|-----------|
-| DL-01 | Customer Data Boundary | How will customer-specific data be distinguished from StoreVoice general knowledge? | Enforces ownership boundaries | Founder Decision 6.19 | OPEN | Logical separation / Physical separation / Hybrid | Founder | YES |
-| DL-02 | Anonymization Process | How will anonymization be implemented for learning? | Supports cross-customer learning | Founder Decision 6.18 | OPEN | Automated / Manual / Hybrid | Founder | NO |
-| DL-03 | Aggregation Process | How will aggregation be implemented? | Supports product improvement | Founder Decision 6.18 | OPEN | Real-time / Batch / Hybrid | Founder | NO |
-| DL-04 | Leakage Prevention | How will customer knowledge leakage be prevented? | Protects customer confidentiality | Founder Decision 6.18 | OPEN | Technical controls / Process controls / Hybrid | Founder | YES |
+| DL-01 | Customer Data Boundary | How will customer-specific data be distinguished from StoreVoice general knowledge? | Enforces ownership boundaries | Founder Decision 6.19, FQ-08 (Frozen) | FQ-08 DECIDED: Architecture must maintain hard distinction between tenant/customer data and StoreVoice-owned general learning | Logical separation / Physical separation / Hybrid | Founder | YES |
+| DL-02 | Anonymization Process | How will anonymization be implemented for learning? | Supports cross-customer learning | Founder Decision 6.18, FQ-08 (Frozen) | FQ-08 DECIDED: StoreVoice may retain genuinely non-identifiable, aggregated/general insights | Automated / Manual / Hybrid | Founder | NO |
+| DL-03 | Aggregation Process | How will aggregation be implemented? | Supports product improvement | Founder Decision 6.18, FQ-08 (Frozen) | FQ-08 DECIDED: StoreVoice may retain genuinely non-identifiable, aggregated/general insights | Real-time / Batch / Hybrid | Founder | NO |
+| DL-04 | Leakage Prevention | How will customer knowledge leakage be prevented? | Protects customer confidentiality | Founder Decision 6.18, FQ-08 (Frozen) | FQ-08 DECIDED: Customer data must not cross tenant boundaries | Technical controls / Process controls / Hybrid | Founder | YES |
 
 ### R. Provider Abstraction
 
@@ -216,4 +229,4 @@ The following dependencies exist between decisions:
 ---
 
 **Last Updated:** 2026-09-04
-**Approved By:** Change 003C — Architecture Decision Preparation
+**Approved By:** Change 004B — Freeze Founder Architecture Decisions

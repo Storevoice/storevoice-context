@@ -60,6 +60,9 @@ The platform must support country-aware localization across all customer-facing 
 ### Architectural implication
 OPEN.
 
+### Frozen Founder Decision (Change 004B)
+**FQ-05 — European Language Scope:** The architecture must be capable of supporting all European languages and localized customer experiences. Individual languages and markets may be rolled out progressively. This does NOT require every language to be commercially launched immediately. It DOES require the architecture to avoid artificial limitations that would prevent future European language and localization expansion. Localization includes more than translation. The architecture must allow country-specific language, wording, communication style, formality, cultural behavior, and customer-facing experience while maintaining the central StoreVoice platform.
+
 ---
 
 ## 6.5 AI Colleague Philosophy
@@ -72,6 +75,9 @@ The platform must support AI colleague personas, emotional recognition and appro
 
 ### Architectural implication
 OPEN.
+
+### Frozen Founder Decision (Change 004B)
+**FQ-01 — Engine Modification Policy:** The Voice Engine remains frozen by default. Modification is permitted only through an explicit human-approved architectural change when the required capability cannot reasonably be implemented outside the engine without compromising correctness, performance, maintainability, or product requirements. This decision affects how AI colleague personas, emotional recognition, and context-aware interaction can be implemented — either within the engine (if modification is approved) or at the platform level (if the capability can be reasonably implemented outside the engine).
 
 ---
 
@@ -99,6 +105,9 @@ The platform must support human escalation workflows, including transfer to huma
 ### Architectural implication
 OPEN.
 
+### Frozen Founder Decision (Change 004B)
+**FQ-07 — White Glove Service Scope:** White Glove provides 24/7 human responsibility and escalation. This does NOT mean StoreVoice must maintain an immediately available live human operator every minute of every day. When immediate human intervention is required and a human is available, the customer/caller may be transferred. When immediate human intervention is required outside human availability, the AI must handle the situation safely, preserve the relevant context, and arrange appropriate human follow-up/callback. The principle is: HUMAN RESPONSIBILITY 24/7. Not: 24/7 staffed call-centre obligation.
+
 ---
 
 ## 6.8 Autonomous Operation
@@ -124,6 +133,11 @@ The platform must support technology versioning, controlled rollouts, and human 
 
 ### Architectural implication
 OPEN.
+
+### Frozen Founder Decisions (Change 004B)
+**FQ-01 — Engine Modification Policy:** The Voice Engine remains frozen by default. Modification is permitted only through an explicit human-approved architectural change when the required capability cannot reasonably be implemented outside the engine without compromising correctness, performance, maintainability, or product requirements.
+
+**FQ-02 — Engine Replacement Policy:** The Voice Engine is replaceable, but the StoreVoice platform contract is not. The architecture must maintain a clean Voice Engine boundary/interface so that the underlying engine can eventually be replaced without requiring reconstruction of the StoreVoice platform. Replacement requires explicit human approval and must consider capability, reliability, latency, compliance, quality, operational implications, migration risk, and customer continuity. Existing customer continuity takes precedence over adopting newer technology merely because it exists.
 
 ---
 
@@ -241,6 +255,9 @@ The platform must support anonymized and aggregated learning without cross-custo
 
 ### Architectural implication
 OPEN.
+
+### Frozen Founder Decision (Change 004B)
+**FQ-08 — Customer Knowledge Ownership:** Customer-specific knowledge is deleted after termination, subject to the established 14-day recovery/reactivation period and any legally required retention. StoreVoice may retain genuinely non-identifiable, aggregated/general insights for improvement of the central StoreVoice product. Examples include: recurring categories of questions, anonymized escalation patterns, aggregate QA findings, general knowledge gaps, and aggregate product-performance patterns. StoreVoice MUST NOT retain customer-identifiable or reconstructable customer-specific knowledge for this purpose. The architecture must maintain a hard distinction between: (1) tenant/customer data and knowledge, and (2) StoreVoice-owned general learning and improvement. Customer data must not cross tenant boundaries.
 
 ---
 
@@ -385,6 +402,9 @@ The platform must support demo creation from website scraping, temporary demo in
 ### Architectural implication
 OPEN.
 
+### Frozen Founder Decision (Change 004B)
+**FQ-09 — Demo Conversion Policy:** Demo instances are temporary by design. The normal demo retention period is approximately 48 hours when there is no customer action. The demo lifecycle must be measurable and configurable. The system should be capable of measuring events such as: demo creation, demo activation, demo call, demo completion, follow-up interaction, conversion, expiry, and reactivation/action. No assumed demo conversion rate becomes a hard architectural constraint. Conversion rate is a commercial metric that may change over time.
+
 ---
 
 ## 6.30 Service Philosophy
@@ -410,4 +430,4 @@ OPEN.
 ---
 
 **Last Updated:** 2026-09-04
-**Approved By:** Change 003A — Founder Decision Set Consolidation
+**Approved By:** Change 004B — Freeze Founder Architecture Decisions
