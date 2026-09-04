@@ -24,6 +24,8 @@
 | 2026-09-04 | 05_DECISIONS/FOUNDER_DECISION_TO_PLATFORM_REQUIREMENTS.md | CREATED | Derive platform requirements from founder decisions | Change 003A |
 | 2026-09-04 | 05_DECISIONS/OPEN_DECISIONS.md | CREATED | Record unresolved decisions | Change 003A |
 | 2026-09-04 | 05_DECISIONS/CAPABILITY_GAP_ANALYSIS.md | CREATED | Architecture readiness capability analysis | Change 003B |
+| 2026-09-04 | 05_DECISIONS/ARCHITECTURE_DECISION_REGISTER.md | CREATED | Architecture decision map for future design | Change 003C |
+| 2026-09-04 | 05_DECISIONS/ARCHITECTURE_FOUNDER_QUESTIONS.md | CREATED | Questions requiring Founder authority | Change 003C |
 
 ---
 
@@ -61,4 +63,4 @@ When recording a new change:
 ---
 
 **Last Updated:** 2026-09-04
-**Approved By:** Change 003B — Architecture Readiness / Existing Capability & Gap Analysis
+**Approved By:** Change 003C — Architecture Decision Preparation
