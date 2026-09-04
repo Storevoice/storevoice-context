@@ -23,6 +23,7 @@
 | 2026-09-04 | 05_DECISIONS/FOUNDER_DECISION_SET.md | CREATED | Consolidate founder decision set | Change 003A |
 | 2026-09-04 | 05_DECISIONS/FOUNDER_DECISION_TO_PLATFORM_REQUIREMENTS.md | CREATED | Derive platform requirements from founder decisions | Change 003A |
 | 2026-09-04 | 05_DECISIONS/OPEN_DECISIONS.md | CREATED | Record unresolved decisions | Change 003A |
+| 2026-09-04 | 05_DECISIONS/CAPABILITY_GAP_ANALYSIS.md | CREATED | Architecture readiness capability analysis | Change 003B |
 
 ---
 
@@ -60,4 +61,4 @@ When recording a new change:
 ---
 
 **Last Updated:** 2026-09-04
-**Approved By:** Change 003A — Founder Decision Set Consolidation
+**Approved By:** Change 003B — Architecture Readiness / Existing Capability & Gap Analysis
