@@ -56,6 +56,7 @@
 | .opencode/agent/ | CREATED | Agent definitions for all 31 agents with proper boundaries and permissions | Change 005F |
 | .opencode/orchestration/ | CREATED | Orchestration infrastructure specifications (context, artifacts, state, dependencies, revision, failure, scope, escalation, audit, Phase 2 gate) | Change 005F |
 | .opencode/tests/ | CREATED | Orchestration test suite (end-to-end, fresh-context, revision, failure-isolation, scope-violation, escalation, parallelism) | Change 005F |
+| .opencode/validation/ | CREATED | Orchestration validation report and structural validation | Change 005G |
 
 ---
 
@@ -93,4 +94,4 @@ When recording a new change:
 ---
 
 **Last Updated:** 2026-09-04
-**Approved By:** Change 005F — OpenCode Agent Organization & Orchestrator Implementation
+**Approved By:** Change 005G — Autonomous Orchestration Validation & Anti-Drift Stress Test
