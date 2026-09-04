@@ -474,6 +474,68 @@ The intended word-of-mouth reaction is essentially:
 
 ---
 
+## 6.31 Platform Centralization Level (FQ-03)
+
+StoreVoice has one central platform and authoritative control plane.
+
+Regional processing may be introduced where required or materially beneficial for:
+* compliance
+* latency
+* resilience
+* capacity
+* provider availability
+
+Regional processing remains subordinate to the central StoreVoice platform and does not create independent product or platform standards.
+
+---
+
+## 6.32 Capability Universality (FQ-04)
+
+StoreVoice operates one universal platform containing the capabilities required to support its European service model.
+
+Customer access to capabilities is governed through:
+* package entitlements
+* configuration
+* regulatory availability
+* operational permissions
+
+Package differences must not create separate platform architectures or incompatible product standards.
+
+---
+
+## 6.33 Regulatory Adaptation Scope (FQ-06)
+
+StoreVoice centrally governs regulatory adaptation across the platform.
+
+Regulatory changes are applied according to:
+* applicable jurisdiction
+* service
+* legal requirements
+* deadlines
+* risk
+* operational readiness
+
+Mandatory changes cannot be refused by customers.
+
+Where legally permissible, implementation may be phased centrally without creating independent customer-specific regulatory standards.
+
+---
+
+## 6.34 Package Evolution (FQ-10)
+
+StoreVoice may evolve its commercial packages and platform capabilities under central human governance.
+
+Existing customers retain their agreed package functionality and commercial commitments for the applicable paid or committed period.
+
+Material package changes are:
+* versioned
+* communicated clearly
+* migrated through controlled process rather than imposed arbitrarily
+
+Mandatory regulatory or safety changes remain governed by the central compliance and safety rules.
+
+---
+
 ## Rules for Future Updates
 
 - Founder decisions are authoritative and must not be altered without explicit founder approval
@@ -484,4 +546,4 @@ The intended word-of-mouth reaction is essentially:
 ---
 
 **Last Updated:** 2026-09-04
-**Approved By:** Change 003A — Founder Decision Set Consolidation
+**Approved By:** Change 004B.2 — Record, Trace, and Freeze All Founder Decisions

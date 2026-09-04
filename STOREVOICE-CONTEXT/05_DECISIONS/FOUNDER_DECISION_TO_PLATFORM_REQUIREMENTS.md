@@ -34,6 +34,9 @@ The platform must support multi-country operation from a single central platform
 ### Architectural implication
 OPEN.
 
+### Frozen Founder Decision (Change 004B.2)
+**FQ-03 — Platform Centralization Level:** StoreVoice has one central platform and authoritative control plane. Regional processing may be introduced where required or materially beneficial for compliance, latency, resilience, capacity, or provider availability. Regional processing remains subordinate to the central StoreVoice platform and does not create independent product or platform standards.
+
 ---
 
 ## 6.3 Central Platform
@@ -46,6 +49,9 @@ The platform must be accessible via `storevoice.ai` as the central entry point.
 
 ### Architectural implication
 OPEN.
+
+### Frozen Founder Decision (Change 004B.2)
+**FQ-03 — Platform Centralization Level:** StoreVoice has one central platform and authoritative control plane. Regional processing may be introduced where required or materially beneficial for compliance, latency, resilience, capacity, or provider availability. Regional processing remains subordinate to the central StoreVoice platform and does not create independent product or platform standards.
 
 ---
 
@@ -151,6 +157,9 @@ The platform must support compliance monitoring, service adaptation for regulato
 
 ### Architectural implication
 OPEN.
+
+### Frozen Founder Decision (Change 004B.2)
+**FQ-06 — Regulatory Adaptation Scope:** StoreVoice centrally governs regulatory adaptation across the platform. Regulatory changes are applied according to applicable jurisdiction, service, legal requirements, deadlines, risk, and operational readiness. Mandatory changes cannot be refused by customers. Where legally permissible, implementation may be phased centrally without creating independent customer-specific regulatory standards.
 
 ---
 
@@ -311,6 +320,11 @@ The platform must support package-based feature gating, pricing tiers, and self-
 ### Architectural implication
 OPEN.
 
+### Frozen Founder Decisions (Change 004B.2)
+**FQ-04 — Capability Universality:** StoreVoice operates one universal platform containing the capabilities required to support its European service model. Customer access to capabilities is governed through package entitlements, configuration, regulatory availability, and operational permissions. Package differences must not create separate platform architectures or incompatible product standards.
+
+**FQ-10 — Package Evolution:** StoreVoice may evolve its commercial packages and platform capabilities under central human governance. Existing customers retain their agreed package functionality and commercial commitments for the applicable paid or committed period. Material package changes are versioned and communicated clearly, and migration is controlled rather than imposed arbitrarily. Mandatory regulatory or safety changes remain governed by the central compliance and safety rules.
+
 ---
 
 ## 6.23 Package Boundaries
@@ -323,6 +337,11 @@ The platform must support package-based feature enforcement, immediate upgrades 
 
 ### Architectural implication
 OPEN.
+
+### Frozen Founder Decisions (Change 004B.2)
+**FQ-04 — Capability Universality:** StoreVoice operates one universal platform containing the capabilities required to support its European service model. Customer access to capabilities is governed through package entitlements, configuration, regulatory availability, and operational permissions. Package differences must not create separate platform architectures or incompatible product standards.
+
+**FQ-10 — Package Evolution:** StoreVoice may evolve its commercial packages and platform capabilities under central human governance. Existing customers retain their agreed package functionality and commercial commitments for the applicable paid or committed period. Material package changes are versioned and communicated clearly, and migration is controlled rather than imposed arbitrarily. Mandatory regulatory or safety changes remain governed by the central compliance and safety rules.
 
 ---
 
@@ -430,4 +449,4 @@ OPEN.
 ---
 
 **Last Updated:** 2026-09-04
-**Approved By:** Change 004B — Freeze Founder Architecture Decisions
+**Approved By:** Change 004B.2 — Record, Trace, and Freeze All Founder Decisions

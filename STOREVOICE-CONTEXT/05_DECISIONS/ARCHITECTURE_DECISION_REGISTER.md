@@ -21,6 +21,15 @@ The following Founder decisions have been frozen during Architecture Decision Se
 * **FQ-08 — Customer Knowledge Ownership:** Customer-specific knowledge is deleted after termination; StoreVoice may retain genuinely non-identifiable, aggregated/general insights; architecture must maintain hard distinction between tenant/customer data and StoreVoice-owned general learning.
 * **FQ-09 — Demo Conversion Policy:** Demo instances are temporary by design (approximately 48 hours default); lifecycle must be measurable and configurable; no assumed conversion rate becomes a hard architectural constraint.
 
+## Frozen Founder Decisions (Change 004B.2)
+
+The following Founder decisions have been frozen during Architecture Decision Session 004B.2:
+
+* **FQ-03 — Platform Centralization Level:** StoreVoice has one central platform and authoritative control plane. Regional processing may be introduced where required or materially beneficial for compliance, latency, resilience, capacity, or provider availability. Regional processing remains subordinate to the central StoreVoice platform and does not create independent product or platform standards.
+* **FQ-04 — Capability Universality:** StoreVoice operates one universal platform containing the capabilities required to support its European service model. Customer access to capabilities is governed through package entitlements, configuration, regulatory availability, and operational permissions. Package differences must not create separate platform architectures or incompatible product standards.
+* **FQ-06 — Regulatory Adaptation Scope:** StoreVoice centrally governs regulatory adaptation across the platform. Regulatory changes are applied according to applicable jurisdiction, service, legal requirements, deadlines, risk, and operational readiness. Mandatory changes cannot be refused by customers. Where legally permissible, implementation may be phased centrally without creating independent customer-specific regulatory standards.
+* **FQ-10 — Package Evolution:** StoreVoice may evolve its commercial packages and platform capabilities under central human governance. Existing customers retain their agreed package functionality and commercial commitments for the applicable paid or committed period. Material package changes are versioned and communicated clearly, and migration is controlled rather than imposed arbitrarily. Mandatory regulatory or safety changes remain governed by the central compliance and safety rules.
+
 ---
 
 ## Decision Categories

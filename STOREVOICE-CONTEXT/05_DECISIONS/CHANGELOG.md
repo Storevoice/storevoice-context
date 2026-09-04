@@ -33,6 +33,11 @@
 | 2026-09-04 | 05_DECISIONS/DECISIONS.md | UPDATED | Recorded 6 Founder-authorized architecture decisions | Change 004B |
 | 05_DECISIONS/FOUNDER_DECISION_TO_PLATFORM_REQUIREMENTS.md | UPDATED | Added frozen Founder decisions to 6 platform requirements sections | Change 004B |
 | 05_DECISIONS/ARCHITECTURE_FOUNDER_QUESTIONS.md | UPDATED | Prepared Founder Decision Session for FQ-03, FQ-04, FQ-06, FQ-10 | Change 004B.1 |
+| 05_DECISIONS/ARCHITECTURE_FOUNDER_QUESTIONS.md | UPDATED | Marked FQ-03, FQ-04, FQ-06, FQ-10 as RESOLVED; all 10 Founder Questions now resolved | Change 004B.2 |
+| 05_DECISIONS/ARCHITECTURE_DECISION_REGISTER.md | UPDATED | Added 4 frozen Founder decisions from Change 004B.2 | Change 004B.2 |
+| 05_DECISIONS/DECISIONS.md | UPDATED | Recorded 4 Founder-authorized architecture decisions from Change 004B.2 | Change 004B.2 |
+| 05_DECISIONS/FOUNDER_DECISION_TO_PLATFORM_REQUIREMENTS.md | UPDATED | Added frozen Founder decisions to platform requirements sections for FQ-03, FQ-04, FQ-06, FQ-10 | Change 004B.2 |
+| 05_DECISIONS/FOUNDER_DECISION_SET.md | UPDATED | Added sections 6.31-6.34 for FQ-03, FQ-04, FQ-06, FQ-10 | Change 004B.2 |
 
 ---
 
@@ -70,4 +75,4 @@ When recording a new change:
 ---
 
 **Last Updated:** 2026-09-04
-**Approved By:** Change 004B.1 — Correct Architecture Decision State + Resolve Remaining Founder Questions
+**Approved By:** Change 004B.2 — Record, Trace, and Freeze All Founder Decisions

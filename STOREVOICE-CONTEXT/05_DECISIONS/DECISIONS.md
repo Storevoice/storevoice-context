@@ -27,6 +27,10 @@
 | 2026-09-04 | White Glove Service Scope (FQ-07) | Business | APPROVED | Change 004B | White Glove provides 24/7 human responsibility and escalation, not mandatory 24/7 live staffing |
 | 2026-09-04 | Customer Knowledge Ownership (FQ-08) | Architecture | APPROVED | Change 004B | Customer-specific knowledge is deleted after termination; StoreVoice may retain genuinely non-identifiable, aggregated/general insights |
 | 2026-09-04 | Demo Conversion Policy (FQ-09) | Product | APPROVED | Change 004B | Demo instances are temporary by design (approximately 48 hours default); lifecycle must be measurable and configurable |
+| 2026-09-04 | Platform Centralization Level (FQ-03) | Architecture | APPROVED | Change 004B.2 | StoreVoice has one central platform and authoritative control plane; regional processing remains subordinate and does not create independent standards |
+| 2026-09-04 | Capability Universality (FQ-04) | Architecture | APPROVED | Change 004B.2 | StoreVoice operates one universal platform; customer access governed through package entitlements; package differences must not create separate architectures |
+| 2026-09-04 | Regulatory Adaptation Scope (FQ-06) | Architecture | APPROVED | Change 004B.2 | StoreVoice centrally governs regulatory adaptation; mandatory changes cannot be refused; implementation may be phased centrally where legally permissible |
+| 2026-09-04 | Package Evolution (FQ-10) | Business | APPROVED | Change 004B.2 | StoreVoice may evolve packages under central human governance; existing customers retain commitments for applicable period; material changes versioned and communicated |
 
 ---
 
@@ -78,4 +82,4 @@ When recording a new decision:
 ---
 
 **Last Updated:** 2026-09-04
-**Approved By:** Change 004B — Freeze Founder Architecture Decisions
+**Approved By:** Change 004B.2 — Record, Trace, and Freeze All Founder Decisions
