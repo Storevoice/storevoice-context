@@ -32,6 +32,7 @@
 | 2026-09-04 | 05_DECISIONS/ARCHITECTURE_DECISION_REGISTER.md | UPDATED | Traced 18 decisions to frozen Founder decisions | Change 004B |
 | 2026-09-04 | 05_DECISIONS/DECISIONS.md | UPDATED | Recorded 6 Founder-authorized architecture decisions | Change 004B |
 | 05_DECISIONS/FOUNDER_DECISION_TO_PLATFORM_REQUIREMENTS.md | UPDATED | Added frozen Founder decisions to 6 platform requirements sections | Change 004B |
+| 05_DECISIONS/ARCHITECTURE_FOUNDER_QUESTIONS.md | UPDATED | Prepared Founder Decision Session for FQ-03, FQ-04, FQ-06, FQ-10 | Change 004B.1 |
 
 ---
 
@@ -69,4 +70,4 @@ When recording a new change:
 ---
 
 **Last Updated:** 2026-09-04
-**Approved By:** Change 004B — Freeze Founder Architecture Decisions
+**Approved By:** Change 004B.1 — Correct Architecture Decision State + Resolve Remaining Founder Questions
