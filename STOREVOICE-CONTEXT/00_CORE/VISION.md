@@ -2,7 +2,7 @@
 
 **Purpose:** Defines the core vision, mission, and strategic direction for StoreVoice.
 
-**Status:** TO BE CONFIRMED
+**Status:** DECISION
 
 **Scope:** This document establishes the foundational vision that guides all product decisions.
 
@@ -10,57 +10,135 @@
 
 ## Vision Statement
 
-[TO BE CONFIRMED]
+StoreVoice is:
 
-The vision statement should answer: What is StoreVoice? What problem does it solve? What is the ultimate goal?
+> **A total-solution employment agency for AI colleagues.**
+
+StoreVoice specifically focuses on:
+
+> **developing, delivering, supporting and supervising AI colleagues.**
+
+Technology is the means.
+
+The AI colleague is the delivered capability.
+
+The value is:
+
+> **total relief / complete outsourcing.**
+
+The customer buys the outcome, not the technology.
 
 ---
 
 ## Mission Statement
 
-[TO BE CONFIRMED]
+StoreVoice's mission is to provide businesses with AI colleagues that work as part of their team, without requiring them to become AI experts.
 
-The mission statement should answer: How will StoreVoice achieve its vision? What are the core principles?
+The core promise is:
+
+> **The customer gets a working AI colleague without having to become responsible for the AI technology behind it.**
+
+The customer should be able to focus on their own profession.
+
+This reflects the founder's principle:
+
+> **"Laat de bakker bakken."**
+
+A baker should be able to bake, serve customers and spend time with family.
+
+They should not have to become:
+
+* an AI engineer;
+* a prompt engineer;
+* a system administrator;
+* an AI operations specialist.
+
+StoreVoice takes care of the AI colleague.
 
 ---
 
 ## Target Audience
 
-[TO BE CONFIRMED]
+Businesses that want to provide continuous customer contact without building and managing AI technology themselves.
 
-Who are the primary users of StoreVoice? What are their needs and pain points?
+The ideal customer wants:
+
+* AI colleagues without wanting to build and manage them;
+* total relief from AI technology management;
+* to focus on their own business.
 
 ---
 
 ## Core Value Proposition
 
-[TO BE CONFIRMED]
+StoreVoice provides:
 
-What unique value does StoreVoice provide to its users?
+* **Total relief / complete outsourcing** — The customer buys the outcome, not the technology
+* **Shadow-producer model** — The AI colleague appears as part of the customer's company
+* **White Glove service** — StoreVoice does the work for the customer
+* **Continuous quality** — StoreVoice operates with the mindset of a professional call centre
+* **Customer insight** — StoreVoice tells the company what its customers are experiencing
 
 ---
 
 ## Strategic Goals
 
-[TO BE CONFIRMED]
+Long-term positioning:
 
-What are the measurable objectives that define success for StoreVoice?
+> **StoreVoice becomes the organisation that companies call when they want AI colleagues without wanting to build and manage them themselves.**
+
+The business may eventually supply many types of AI colleagues.
+
+The role may evolve.
+
+The technology may evolve.
+
+The architecture may evolve.
+
+But the central idea remains:
+
+> **AI talent supplied as a managed service.**
 
 ---
 
 ## Non-Goals
 
-[TO BE CONFIRMED]
+StoreVoice is NOT intended to become:
 
-What is StoreVoice explicitly NOT trying to achieve?
+* a generic AI consultancy;
+* a generic automation company;
+* a technology company selling AI tooling;
+* a provider of unrelated AI systems such as warehouse logistics automation.
+
+Do not allow StoreVoice to drift into generic AI consulting simply because other AI applications become possible.
 
 ---
 
 ## Success Metrics
 
-[TO BE CONFIRMED]
+The ideal customer should eventually stop thinking about StoreVoice.
 
-How will we measure whether StoreVoice is achieving its vision?
+Not because StoreVoice becomes irrelevant.
+
+Because the service simply works.
+
+The customer should think:
+
+> **"My AI colleagues are taken care of."**
+
+The desired reaction is not:
+
+> "What impressive technology."
+
+It is:
+
+> **"Wow."**
+
+And ideally the customer later tells another entrepreneur:
+
+> **"You should talk to StoreVoice."**
+
+The reason should be the experience and outcome, not the technology.
 
 ---
 
@@ -73,5 +151,5 @@ How will we measure whether StoreVoice is achieving its vision?
 
 ---
 
-**Last Updated:** [TO BE CONFIRMED]
-**Approved By:** [TO BE CONFIRMED]
+**Last Updated:** 2026-09-04
+**Approved By:** Change 002 — Establish StoreVoice Vision and AI Colleague Philosophy

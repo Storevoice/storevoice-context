@@ -2,7 +2,7 @@
 
 **Purpose:** Records all changes made to the StoreVoice Source of Truth.
 
-**Status:** TO BE CONFIRMED
+**Status:** DECISION
 
 **Scope:** This document serves as the change log for the Source of Truth repository.
 
@@ -12,7 +12,14 @@
 
 | Date | File | Change Type | Description | Changed By |
 |------|------|-------------|-------------|------------|
-| [TO BE CONFIRMED] | [TO BE CONFIRMED] | [TO BE CONFIRMED] | [TO BE CONFIRMED] | [TO BE CONFIRMED] |
+| 2026-09-04 | Multiple | CREATED | Phase 1: Initialize StoreVoice Source of Truth repository | Change 001 |
+| 2026-09-04 | Multiple | UPDATED | Establish frozen voice engine reference | Change 001 |
+| 2026-09-04 | 00_CORE/VISION.md | UPDATED | Establish founder-approved StoreVoice vision | Change 002 |
+| 2026-09-04 | 00_CORE/PRODUCT_CONTRACT.md | UPDATED | Establish product definition and scope | Change 002 |
+| 2026-09-04 | 00_CORE/BUSINESS_RULES.md | UPDATED | Establish business rules and pricing | Change 002 |
+| 2026-09-04 | 02_DESIGN/UX_RULES.md | UPDATED | Establish AI colleague experience principles | Change 002 |
+| 2026-09-04 | 05_DECISIONS/DECISIONS.md | UPDATED | Record Change 002 decisions | Change 002 |
+| 2026-09-04 | 05_DECISIONS/CHANGELOG.md | UPDATED | Record Change 002 changes | Change 002 |
 
 ---
 
@@ -49,5 +56,5 @@ When recording a new change:
 
 ---
 
-**Last Updated:** [TO BE CONFIRMED]
-**Approved By:** [TO BE CONFIRMED]
+**Last Updated:** 2026-09-04
+**Approved By:** Change 002 — Establish StoreVoice Vision and AI Colleague Philosophy

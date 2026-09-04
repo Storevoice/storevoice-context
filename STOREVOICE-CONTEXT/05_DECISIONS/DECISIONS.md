@@ -2,7 +2,7 @@
 
 **Purpose:** Records all important decisions made about StoreVoice.
 
-**Status:** TO BE CONFIRMED
+**Status:** DECISION
 
 **Scope:** This document serves as the authoritative record of all decisions.
 
@@ -12,7 +12,15 @@
 
 | Date | Decision | Category | Status | Approved By | Notes |
 |------|----------|----------|--------|-------------|-------|
-| [TO BE CONFIRMED] | [TO BE CONFIRMED] | [TO BE CONFIRMED] | [TO BE CONFIRMED] | [TO BE CONFIRMED] | [TO BE CONFIRMED] |
+| 2026-09-04 | Voice Engine reference established | Architecture | APPROVED | Change 001 | Frozen reference at commit c62f761acccb23bb6798375f7fef3ba9a1234ebc |
+| 2026-09-04 | StoreVoice vision established | Product | APPROVED | Change 002 | AI colleague employment agency vision |
+| 2026-09-04 | Shadow-producer model established | Business | APPROVED | Change 002 | AI colleague appears as part of customer's company |
+| 2026-09-04 | AI colleague philosophy established | Product | APPROVED | Change 002 | Character without ego, anticipate not initiate |
+| 2026-09-04 | White Glove service model established | Business | APPROVED | Change 002 | Premium service option for total relief |
+| 2026-09-04 | Commercial packages established | Business | APPROVED | Change 002 | Packages A, B, and Enterprise direction |
+| 2026-09-04 | Demo experience established | Product | APPROVED | Change 002 | 30-second demo with website information |
+| 2026-09-04 | Knowledge boundaries established | Technical | APPROVED | Change 002 | AI never invents company knowledge |
+| 2026-09-04 | Human escalation principles established | Product | APPROVED | Change 002 | Transfer must have value for both sides |
 
 ---
 
@@ -63,5 +71,5 @@ When recording a new decision:
 
 ---
 
-**Last Updated:** [TO BE CONFIRMED]
-**Approved By:** [TO BE CONFIRMED]
+**Last Updated:** 2026-09-04
+**Approved By:** Change 002 — Establish StoreVoice Vision and AI Colleague Philosophy
