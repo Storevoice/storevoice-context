@@ -20,6 +20,9 @@
 | 2026-09-04 | 02_DESIGN/UX_RULES.md | UPDATED | Establish AI colleague experience principles | Change 002 |
 | 2026-09-04 | 05_DECISIONS/DECISIONS.md | UPDATED | Record Change 002 decisions | Change 002 |
 | 2026-09-04 | 05_DECISIONS/CHANGELOG.md | UPDATED | Record Change 002 changes | Change 002 |
+| 2026-09-04 | 05_DECISIONS/FOUNDER_DECISION_SET.md | CREATED | Consolidate founder decision set | Change 003A |
+| 2026-09-04 | 05_DECISIONS/FOUNDER_DECISION_TO_PLATFORM_REQUIREMENTS.md | CREATED | Derive platform requirements from founder decisions | Change 003A |
+| 2026-09-04 | 05_DECISIONS/OPEN_DECISIONS.md | CREATED | Record unresolved decisions | Change 003A |
 
 ---
 
@@ -57,4 +60,4 @@ When recording a new change:
 ---
 
 **Last Updated:** 2026-09-04
-**Approved By:** Change 002 — Establish StoreVoice Vision and AI Colleague Philosophy
+**Approved By:** Change 003A — Founder Decision Set Consolidation
