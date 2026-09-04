@@ -41,6 +41,8 @@
 | 01_ARCHITECTURE/ARCHITECTURE.md | UPDATED | Complete target architecture design with 35 required sections | Change 004C |
 | 01_ARCHITECTURE/SYSTEM_MAP.md | UPDATED | Comprehensive system map with Mermaid diagrams | Change 004C |
 | 01_ARCHITECTURE/INTEGRATION_RULES.md | UPDATED | Complete integration rules and provider abstraction | Change 004C |
+| 05_DECISIONS/ARCHITECTURE_VALIDATION_004D.md | CREATED | Architecture validation report with 20 findings across all domains | Change 004D |
+| 05_DECISIONS/CHANGELOG.md | UPDATED | Recorded Change 004D entries | Change 004D |
 
 ---
 
@@ -78,4 +80,4 @@ When recording a new change:
 ---
 
 **Last Updated:** 2026-09-04
-**Approved By:** Change 004C — Architecture Design
+**Approved By:** Change 004D — Architecture Review / Validation
