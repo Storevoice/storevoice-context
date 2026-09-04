@@ -1,0 +1,441 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "username": "StoreVoice",
+  "model": "anthropic/claude-sonnet-4-6",
+  "small_model": "anthropic/claude-haiku-3.5",
+  "default_agent": "orchestrator",
+  "shell": "powershell",
+  "logLevel": "INFO",
+  "share": "disabled",
+  "autoupdate": false,
+  "snapshot": true,
+  "instructions": [
+    "STOREVOICE-CONTEXT/AGENTS.md",
+    "STOREVOICE-CONTEXT/05_DECISIONS/IMPLEMENTATION_BLUEPRINT.md"
+  ],
+  "references": {
+    "source-of-truth": {
+      "path": "STOREVOICE-CONTEXT",
+      "description": "StoreVoice Source of Truth repository containing all authoritative decisions, architecture, and specifications"
+    },
+    "architecture": {
+      "path": "STOREVOICE-CONTEXT/01_ARCHITECTURE",
+      "description": "StoreVoice target architecture including ARCHITECTURE.md, SYSTEM_MAP.md, and INTEGRATION_RULES.md"
+    },
+    "decisions": {
+      "path": "STOREVOICE-CONTEXT/05_DECISIONS",
+      "description": "StoreVoice decision logs, implementation blueprint, and founder decisions"
+    },
+    "design": {
+      "path": "STOREVOICE-CONTEXT/02_DESIGN",
+      "description": "StoreVoice design rules, UX principles, and visual direction"
+    },
+    "core": {
+      "path": "STOREVOICE-CONTEXT/00_CORE",
+      "description": "StoreVoice core vision, product contract, and business rules"
+    }
+  },
+  "agent": {
+    "orchestrator": {
+      "description": "Operational coordination across all StoreVoice capabilities. Manages task decomposition, role selection, context propagation, dependency management, parallel/sequential work, handoffs, artifact exchange, revision loops, failure handling, escalation, independent verification coordination, rollback, and audit trail.",
+      "mode": "primary",
+      "model": "anthropic/claude-sonnet-4-6",
+      "permission": {
+        "edit": "allow",
+        "bash": "allow",
+        "read": "allow",
+        "glob": "allow",
+        "grep": "allow",
+        "list": "allow",
+        "task": "allow",
+        "todowrite": "allow",
+        "webfetch": "ask",
+        "websearch": "ask"
+      }
+    },
+    "founder": {
+      "description": "Human founder with ultimate strategic authority. Not an AI agent - this is a placeholder for human escalation.",
+      "mode": "subagent",
+      "model": "anthropic/claude-sonnet-4-6",
+      "permission": {
+        "edit": "deny",
+        "bash": "deny",
+        "read": "allow"
+      }
+    },
+    "principal-architect": {
+      "description": "Overall architecture coherence and technical design authority. Defines system boundaries, contracts, integration boundaries, dependency architecture, technical tradeoffs, and architectural review.",
+      "mode": "subagent",
+      "model": "anthropic/claude-sonnet-4-6",
+      "permission": {
+        "edit": "allow",
+        "bash": "allow",
+        "read": "allow",
+        "glob": "allow",
+        "grep": "allow",
+        "list": "allow"
+      }
+    },
+    "product-manager": {
+      "description": "Translates founder decisions and strategic direction into explicit product requirements. Manages product requirements, feature definition, acceptance criteria, user outcomes, prioritization, scope, and product archaeology.",
+      "mode": "subagent",
+      "model": "anthropic/claude-sonnet-4-6",
+      "permission": {
+        "edit": "allow",
+        "bash": "allow",
+        "read": "allow",
+        "glob": "allow",
+        "grep": "allow",
+        "list": "allow"
+      }
+    },
+    "experience-design": {
+      "description": "Customer experience design - interaction flows and visual language. Manages customer journeys, information architecture, interaction design, navigation, task flows, onboarding flows, error/empty/loading states, accessibility considerations, cross-channel experience consistency, visual direction, interface composition, visual hierarchy, layouts, components, interaction states, visual consistency, responsive behavior, visual polish, and design artifacts for implementation.",
+      "mode": "subagent",
+      "model": "anthropic/claude-sonnet-4-6",
+      "permission": {
+        "edit": "allow",
+        "bash": "allow",
+        "read": "allow",
+        "glob": "allow",
+        "grep": "allow",
+        "list": "allow"
+      }
+    },
+    "brand-content": {
+      "description": "Brand identity and product communication. Manages brand positioning, brand consistency, visual brand language, verbal brand language, premium positioning, differentiation, trust, consistency across product and marketing, product copy, UX writing, conversion copy, product marketing, onboarding copy, error messaging, trust language, localization-ready content, CTAs, and system messages.",
+      "mode": "subagent",
+      "model": "anthropic/claude-sonnet-4-6",
+      "permission": {
+        "edit": "allow",
+        "bash": "allow",
+        "read": "allow",
+        "glob": "allow",
+        "grep": "allow",
+        "list": "allow"
+      }
+    },
+    "commercial-strategy": {
+      "description": "Market positioning, buyer experience, and conversion optimization. Manages commercial proposition, buyer journey, sales journey, lead qualification, enterprise buyer experience, pricing communication, objections, trust, procurement/IT/legal/executive concerns, conversion optimization, funnel analysis, CTA effectiveness, activation, retention, experimentation, drop-off analysis, technical SEO, content SEO, metadata, structured content, search intent, international SEO, localized search, and website/public experience.",
+      "mode": "subagent",
+      "model": "anthropic/claude-sonnet-4-6",
+      "permission": {
+        "edit": "allow",
+        "bash": "allow",
+        "read": "allow",
+        "glob": "allow",
+        "grep": "allow",
+        "list": "allow"
+      }
+    },
+    "customer-operations": {
+      "description": "Customer lifecycle management from onboarding through ongoing success. Manages onboarding, information collection, validation, configuration, testing, customer confirmation, activation, readiness assessment, customer success, service responsibility, customer communication, operational changes, support, service health, escalation management, periodic reporting, and improvement recommendations.",
+      "mode": "subagent",
+      "model": "anthropic/claude-sonnet-4-6",
+      "permission": {
+        "edit": "allow",
+        "bash": "allow",
+        "read": "allow",
+        "glob": "allow",
+        "grep": "allow",
+        "list": "allow"
+      }
+    },
+    "knowledge-operations": {
+      "description": "Customer knowledge lifecycle - collection, validation, approval, and maintenance. Manages customer information collection, source validation, approval, knowledge versioning, knowledge lifecycle, knowledge updates, knowledge gaps, knowledge conflicts, knowledge deletion, customer confirmation, and knowledge system implementation.",
+      "mode": "subagent",
+      "model": "anthropic/claude-sonnet-4-6",
+      "permission": {
+        "edit": "allow",
+        "bash": "allow",
+        "read": "allow",
+        "glob": "allow",
+        "grep": "allow",
+        "list": "allow"
+      }
+    },
+    "memory-operations": {
+      "description": "AI memory lifecycle - extraction, retrieval, and lifecycle management. Manages memory candidate extraction, relevance, permissions, retrieval, conflict resolution, source/confidence, deletion, tenant isolation, auditability, lifecycle management, and memory system implementation.",
+      "mode": "subagent",
+      "model": "anthropic/claude-sonnet-4-6",
+      "permission": {
+        "edit": "allow",
+        "bash": "allow",
+        "read": "allow",
+        "glob": "allow",
+        "grep": "allow",
+        "list": "allow"
+      }
+    },
+    "human-escalation": {
+      "description": "Human escalation and premium service delivery. Manages human escalation, escalation reasons, cold/warm transfer, context handover, human responsibility, operational/customer/incident escalation, and White Glove service delivery.",
+      "mode": "subagent",
+      "model": "anthropic/claude-sonnet-4-6",
+      "permission": {
+        "edit": "deny",
+        "bash": "deny",
+        "read": "allow"
+      }
+    },
+    "backend": {
+      "description": "Core platform logic - APIs, business logic, database interactions. Implements approved specifications for APIs, business logic, and database interactions.",
+      "mode": "subagent",
+      "model": "anthropic/claude-sonnet-4-6",
+      "permission": {
+        "edit": "allow",
+        "bash": "allow",
+        "read": "allow",
+        "glob": "allow",
+        "grep": "allow",
+        "list": "allow"
+      }
+    },
+    "database": {
+      "description": "Data model and queries. Manages schema, migrations, and queries.",
+      "mode": "subagent",
+      "model": "anthropic/claude-sonnet-4-6",
+      "permission": {
+        "edit": "allow",
+        "bash": "allow",
+        "read": "allow",
+        "glob": "allow",
+        "grep": "allow",
+        "list": "allow"
+      }
+    },
+    "realtime-voice": {
+      "description": "Voice conversation path - channel gateway, session management, voice adapter. Implements voice adapter, session management, and channel gateway.",
+      "mode": "subagent",
+      "model": "anthropic/claude-sonnet-4-6",
+      "permission": {
+        "edit": "allow",
+        "bash": "allow",
+        "read": "allow",
+        "glob": "allow",
+        "grep": "allow",
+        "list": "allow"
+      }
+    },
+    "knowledge-engineering": {
+      "description": "Knowledge system implementation - ingestion, approval, retrieval. Implements knowledge ingestion, approval workflows, and retrieval.",
+      "mode": "subagent",
+      "model": "anthropic/claude-sonnet-4-6",
+      "permission": {
+        "edit": "allow",
+        "bash": "allow",
+        "read": "allow",
+        "glob": "allow",
+        "grep": "allow",
+        "list": "allow"
+      }
+    },
+    "memory-engineering": {
+      "description": "Memory system implementation - extraction, approval, persistence. Implements memory extraction, approval workflows, and persistence.",
+      "mode": "subagent",
+      "model": "anthropic/claude-sonnet-4-6",
+      "permission": {
+        "edit": "allow",
+        "bash": "allow",
+        "read": "allow",
+        "glob": "allow",
+        "grep": "allow",
+        "list": "allow"
+      }
+    },
+    "frontend": {
+      "description": "Customer-facing UI implementation. Implements approved design, components, responsive behavior, and accessibility.",
+      "mode": "subagent",
+      "model": "anthropic/claude-sonnet-4-6",
+      "permission": {
+        "edit": "allow",
+        "bash": "allow",
+        "read": "allow",
+        "glob": "allow",
+        "grep": "allow",
+        "list": "allow"
+      }
+    },
+    "billing": {
+      "description": "Payment integration - Stripe, subscriptions, entitlements. Implements Stripe integration, subscription management, and webhook handlers.",
+      "mode": "subagent",
+      "model": "anthropic/claude-sonnet-4-6",
+      "permission": {
+        "edit": "allow",
+        "bash": "allow",
+        "read": "allow",
+        "glob": "allow",
+        "grep": "allow",
+        "list": "allow"
+      }
+    },
+    "security-engineering": {
+      "description": "Security controls implementation - authentication, authorization, encryption. Implements authentication, authorization, and encryption.",
+      "mode": "subagent",
+      "model": "anthropic/claude-sonnet-4-6",
+      "permission": {
+        "edit": "allow",
+        "bash": "allow",
+        "read": "allow",
+        "glob": "allow",
+        "grep": "allow",
+        "list": "allow"
+      }
+    },
+    "compliance-engineering": {
+      "description": "Compliance system implementation - evaluation, audit. Implements compliance evaluation and audit system.",
+      "mode": "subagent",
+      "model": "anthropic/claude-sonnet-4-6",
+      "permission": {
+        "edit": "allow",
+        "bash": "allow",
+        "read": "allow",
+        "glob": "allow",
+        "grep": "allow",
+        "list": "allow"
+      }
+    },
+    "localization-engineering": {
+      "description": "Localization system implementation - language, cultural adaptation. Implements language system and cultural adaptation.",
+      "mode": "subagent",
+      "model": "anthropic/claude-sonnet-4-6",
+      "permission": {
+        "edit": "allow",
+        "bash": "allow",
+        "read": "allow",
+        "glob": "allow",
+        "grep": "allow",
+        "list": "allow"
+      }
+    },
+    "infrastructure": {
+      "description": "Deployment and operations - CI/CD, monitoring, scaling. Configures CI/CD, monitoring, and scaling.",
+      "mode": "subagent",
+      "model": "anthropic/claude-sonnet-4-6",
+      "permission": {
+        "edit": "allow",
+        "bash": "allow",
+        "read": "allow",
+        "glob": "allow",
+        "grep": "allow",
+        "list": "allow"
+      }
+    },
+    "observability": {
+      "description": "Monitoring and alerting - logging, metrics, tracing. Configures logging, metrics, and tracing.",
+      "mode": "subagent",
+      "model": "anthropic/claude-sonnet-4-6",
+      "permission": {
+        "edit": "allow",
+        "bash": "allow",
+        "read": "allow",
+        "glob": "allow",
+        "grep": "allow",
+        "list": "allow"
+      }
+    },
+    "integration": {
+      "description": "External provider integration - adapters, webhooks. Implements provider adapters and webhook handlers.",
+      "mode": "subagent",
+      "model": "anthropic/claude-sonnet-4-6",
+      "permission": {
+        "edit": "allow",
+        "bash": "allow",
+        "read": "allow",
+        "glob": "allow",
+        "grep": "allow",
+        "list": "allow"
+      }
+    },
+    "code-reviewer": {
+      "description": "Code quality review - independent verification of implementation. Reviews code, approves/rejects changes, and enforces quality standards.",
+      "mode": "subagent",
+      "model": "anthropic/claude-sonnet-4-6",
+      "permission": {
+        "edit": "deny",
+        "bash": "deny",
+        "read": "allow",
+        "glob": "allow",
+        "grep": "allow",
+        "list": "allow"
+      }
+    },
+    "trust-compliance": {
+      "description": "Trust, security, privacy, compliance, and AI transparency. Defines trust/compliance/localization policy.",
+      "mode": "subagent",
+      "model": "anthropic/claude-sonnet-4-6",
+      "permission": {
+        "edit": "allow",
+        "bash": "allow",
+        "read": "allow",
+        "glob": "allow",
+        "grep": "allow",
+        "list": "allow"
+      }
+    },
+    "qa": {
+      "description": "Functional test automation and visual/UX verification. Creates tests, runs tests, verifies visual/UX quality, verifies accessibility, and approves/rejects quality.",
+      "mode": "subagent",
+      "model": "anthropic/claude-sonnet-4-6",
+      "permission": {
+        "edit": "allow",
+        "bash": "allow",
+        "read": "allow",
+        "glob": "allow",
+        "grep": "allow",
+        "list": "allow"
+      }
+    },
+    "red-team": {
+      "description": "Independent challenge and commercial evaluation. Challenges assumptions, evaluates commercial viability, and rejects commercially weak work.",
+      "mode": "subagent",
+      "model": "anthropic/claude-sonnet-4-6",
+      "permission": {
+        "edit": "deny",
+        "bash": "deny",
+        "read": "allow",
+        "glob": "allow",
+        "grep": "allow",
+        "list": "allow"
+      }
+    },
+    "product-audit": {
+      "description": "Recurring multi-dimensional audit across all quality dimensions. Audits all dimensions, produces audit reports, and recommends improvements.",
+      "mode": "subagent",
+      "model": "anthropic/claude-sonnet-4-6",
+      "permission": {
+        "edit": "deny",
+        "bash": "deny",
+        "read": "allow",
+        "glob": "allow",
+        "grep": "allow",
+        "list": "allow"
+      }
+    },
+    "analytics": {
+      "description": "Product and operational measurement. Defines metrics, collects data, analyzes results, produces reports, and recommends improvements.",
+      "mode": "subagent",
+      "model": "anthropic/claude-sonnet-4-6",
+      "permission": {
+        "edit": "allow",
+        "bash": "allow",
+        "read": "allow",
+        "glob": "allow",
+        "grep": "allow",
+        "list": "allow"
+      }
+    },
+    "innovation-scout": {
+      "description": "Improvement proposals across all dimensions. Identifies opportunities, creates proposals, and recommends improvements.",
+      "mode": "subagent",
+      "model": "anthropic/claude-sonnet-4-6",
+      "permission": {
+        "edit": "allow",
+        "bash": "allow",
+        "read": "allow",
+        "glob": "allow",
+        "grep": "allow",
+        "list": "allow"
+      }
+    }
+  }
+}
