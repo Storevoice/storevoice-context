@@ -2,7 +2,7 @@
 
 **Purpose:** Defines rules and standards for integrating StoreVoice with external systems.
 
-**Status:** TO BE CONFIRMED
+**Status:** DECISION
 
 **Scope:** This document establishes how StoreVoice interacts with external dependencies.
 
@@ -10,17 +10,33 @@
 
 ## External Dependencies
 
-[TO BE CONFIRMED]
+**Status:** DECISION
 
-List all external systems StoreVoice depends on.
+The primary external dependency for StoreVoice is:
+
+**Voice Engine:**
+- Repository: https://github.com/Storevoice/storevoice
+- Reference Commit: `c62f761acccb23bb6798375f7fef3ba9a1234ebc`
+- Status: FROZEN REFERENCE
+- Role: Approved StoreVoice reference implementation for voice-related functionality
+
+Future StoreVoice product builds must use this approved Voice Engine as their canonical reference. AI agents must inspect the Source of Truth and the approved Voice Engine reference before creating or replacing any voice-engine functionality.
 
 ---
 
 ## Integration Patterns
 
-[TO BE CONFIRMED]
+**Status:** DECISION
 
-What patterns are used for integrations (REST, GraphQL, webhooks, etc.)?
+**Current integration model for Voice Engine:**
+
+`Product → approved integration → Voice Engine`
+
+**Future target integration model:**
+
+`Multiple Products → approved Voice API / Integration Boundary → StoreVoice Voice Engine`
+
+The future integration boundary must be designed, specified and approved before it becomes an implementation requirement. Do NOT claim that an API exists if it does not exist.
 
 ---
 
@@ -94,8 +110,11 @@ How integrations are monitored and logged.
 - All modifications must be recorded in `05_DECISIONS/CHANGELOG.md`
 - Changes must follow the governance workflow in `AGENTS.md`
 - Integration updates may require corresponding updates to ARCHITECTURE.md and SYSTEM_MAP.md
+- Voice Engine integration is the primary external dependency
+- Future StoreVoice product builds must use the approved Voice Engine as their canonical reference
+- Any change to the Voice Engine integration pattern is an architectural decision
 
 ---
 
-**Last Updated:** [TO BE CONFIRMED]
-**Approved By:** [TO BE CONFIRMED]
+**Last Updated:** 2026-09-04
+**Approved By:** Change 001 — Official Voice Engine Reference & Future Build Integration
