@@ -2704,38 +2704,34 @@ Phase 0 → Phase 1 → Phase 5 → Phase 6 → Phase 7 → Phase 8 → Phase 15
 
 ---
 
-## SECTION AB — COMMERCIAL PRODUCT AGENT ORGANIZATION
+## SECTION AB — AGENT TOPOLOGY & ORCHESTRATION SPECIFICATION
 
-### Organization Overview
+### Topology Overview
 
-StoreVoice is not merely a software engineering project. It is a product, customer experience, commercial proposition, brand, service operation, AI system, managed-service business, European business, compliance-sensitive product, and continuously improving commercial system.
+Change 005D defined 40 capabilities/roles. Change 005E determines the **actual agent topology** — the smallest coherent multi-agent organization that provides complete capability coverage.
 
-The agent organization covers the **entire product lifecycle**:
+**005E Result: 31 agents across 10 layers.**
+
+The topology groups related capabilities where:
+
+* shared context is high
+* authority boundaries align
+* grouping does not compromise independence
+* specialization is preserved where failure impact is high
+
+### Organizational Layers
 
 ```text
-DISCOVER
-  ↓
-DEFINE
-  ↓
-DESIGN
-  ↓
-BUILD
-  ↓
-VERIFY
-  ↓
-LAUNCH
-  ↓
-ACTIVATE
-  ↓
-OPERATE
-  ↓
-MEASURE
-  ↓
-LEARN
-  ↓
-IMPROVE
-  ↓
-VERIFY AGAIN
+LAYER 0 — FOUNDER
+LAYER 1 — ORCHESTRATION
+LAYER 2 — PRODUCT / STRATEGY
+LAYER 3 — EXPERIENCE / CREATIVE
+LAYER 4 — COMMERCIAL
+LAYER 5 — CUSTOMER OPERATIONS
+LAYER 6 — ENGINEERING
+LAYER 7 — TRUST / GOVERNANCE
+LAYER 8 — INDEPENDENT VERIFICATION
+LAYER 9 — INTELLIGENCE
 ```
 
 ### Authority Hierarchy
@@ -2756,9 +2752,7 @@ AI RECOMMENDATIONS
 
 AI agents must never become the authority over Founder Decisions.
 
-### Agent Roles — Complete Commercial Product Organization
-
-#### Verification Principle
+### Verification Principle
 
 The organization distinguishes:
 
@@ -2770,330 +2764,962 @@ No agent may approve its own critical work where independent verification is req
 
 ---
 
-### STRATEGIC CAPABILITIES
+## AGENT DEFINITIONS
 
-| # | Agent | Mission | Owned Areas | Forbidden Areas |
-|---|-------|---------|-------------|-----------------|
-| 1 | **Principal Architect** | Overall architecture coherence | Architecture decisions, system boundaries, contracts, integration boundaries, dependency architecture, technical tradeoffs, architectural review | Implementation code, product decisions |
-| 2 | **Product Manager** | Translate founder decisions into product requirements | Product requirements, feature definition, acceptance criteria, user outcomes, prioritization, scope, product archaeology, product coherence | Founder Decisions, architecture, pricing, brand |
-| 3 | **Product Archaeology** | Reconstruct why existing functionality exists | Inspect existing behavior, discover hidden assumptions, identify historical constraints, preserve valuable existing behavior | Inventing history, modifying implementation |
-
-**Note:** Product Archaeology is a sub-capability of Product Manager. It is activated when existing product behavior must be understood before changes.
+### LAYER 0 — FOUNDER
 
 ---
 
-### CREATIVE CAPABILITIES
-
-| # | Agent | Mission | Owned Areas | Forbidden Areas |
-|---|-------|---------|-------------|-----------------|
-| 4 | **UX / Product Experience** | Customer journeys, interaction flows, usability | Customer journeys, information architecture, interaction design, navigation, task flows, onboarding flows, error/empty/loading states, accessibility considerations, cross-channel experience consistency | Business rules, visual design authority, content authority |
-| 5 | **Visual / Product Design** | Visual language, interface composition, design-system application | Visual direction, interface composition, visual hierarchy, layouts, components, interaction states, visual consistency, responsive behavior, visual polish, design artifacts for implementation | Business rules, content authority, implementation |
-| 6 | **Design System** | Design tokens, typography, spacing, component principles | Design tokens, typography, spacing, color, grid, elevation, iconography, component principles, component states, interaction states, responsive rules, accessibility requirements, motion principles | Business rules, content authority, implementation |
-| 7 | **Brand Direction** | Brand positioning, brand consistency, trust | Brand positioning, brand consistency, visual brand language, verbal brand language, premium positioning, differentiation, trust, consistency across product and marketing | Business rules, implementation |
-| 8 | **Content / Product Copy** | Product language, UX writing, customer-facing copy | Product copy, UX writing, conversion copy, product marketing, onboarding copy, error messaging, trust language, localization-ready content, CTAs, system messages | Business rules, capabilities, pricing, compliance claims |
-
-**Design Pipeline:**
+#### AGENT: FOUNDER
 
 ```text
-PRODUCT REQUIREMENT
-        ↓
-UX / PRODUCT EXPERIENCE
-        ↓
-VISUAL / PRODUCT DESIGN
-        ↓
-DESIGN SYSTEM
-        ↓
-CONTENT
-        ↓
-IMPLEMENTATION CONTRACT
-        ↓
-FRONTEND / BACKEND
+Agent ID: L0-FOUNDER
+Agent Name: Human Founder
+Purpose: Ultimate strategic authority for StoreVoice
+Capabilities Owned: All strategic decisions, Founder Decisions, final authority
+Authority: SUPREME — overrides all other agents
+Inputs: All reports, proposals, escalations
+Outputs: Founder Decisions, strategic direction, approvals
+Dependencies: None (is the authority source)
+Context Required: Complete project truth
+Persistent Artifacts: FOUNDER_DECISION_SET.md, DECISIONS.md
+Allowed Actions: Decide, approve, reject, escalate, override
+Forbidden Actions: None (is the supreme authority)
+Escalation Conditions: Never (is the escalation target)
+Independent Review Requirements: None
+Success Criteria: Strategic coherence, commercial viability, founder satisfaction
 ```
 
 ---
 
-### COMMERCIAL CAPABILITIES
-
-| # | Agent | Mission | Owned Areas | Forbidden Areas |
-|---|-------|---------|-------------|-----------------|
-| 9 | **Commercial / Sales** | Commercial proposition, buyer experience | Commercial proposition, buyer journey, sales journey, lead qualification, enterprise buyer experience, pricing communication, objections, trust, procurement/IT/legal/executive concerns | Product strategy, architecture |
-| 10 | **Growth / CRO** | Conversion optimization, funnel analysis | Conversion optimization, funnel analysis, CTA effectiveness, activation, retention, experimentation, drop-off analysis | Product strategy, brand |
-| 11 | **SEO / Discoverability** | Search discoverability, information architecture for findability | Technical SEO, content SEO, metadata, structured content, search intent, international SEO, localized search | Product UX, brand positioning |
-| 12 | **Website / Public Experience** | Public commercial experience as a product surface | Homepage, product/system explanation, differentiation, industries/use cases, trust/security, investment/pricing, company, enterprise contact, privacy, terms, AI transparency, accessibility | Product strategy, architecture |
+### LAYER 1 — ORCHESTRATION
 
 ---
 
-### CUSTOMER CAPABILITIES
-
-| # | Agent | Mission | Owned Areas | Forbidden Areas |
-|---|-------|---------|-------------|-----------------|
-| 13 | **Customer Onboarding / Activation** | Customer lifecycle from new to active | Onboarding, information collection, validation, configuration, testing, customer confirmation, activation, readiness assessment | Product strategy, architecture |
-| 14 | **Customer Success / Service Operations** | Ongoing customer service delivery | Customer success, service responsibility, customer communication, operational changes, support, service health, escalation management, periodic reporting, improvement recommendations | Product strategy, architecture |
-| 15 | **Knowledge Operations** | Customer knowledge lifecycle | Customer information collection, source validation, approval, knowledge versioning, knowledge lifecycle, knowledge updates, knowledge gaps, knowledge conflicts, knowledge deletion, customer confirmation | Other domains |
-| 16 | **Memory Operations** | AI memory lifecycle | Memory candidate extraction, relevance, permissions, retrieval, conflict resolution, source/confidence, deletion, tenant isolation, auditability, lifecycle management | Knowledge, other domains |
-| 17 | **Human Escalation / White Glove** | Escalation and premium service delivery | Human escalation, escalation reasons, cold/warm transfer, context handover, human responsibility, operational/customer/incident escalation, White Glove service delivery | Product strategy, architecture |
-
-**Customer Lifecycle:**
+#### AGENT: ORCHESTRATOR
 
 ```text
-NEW CUSTOMER
-    ↓
-ONBOARDING
-    ↓
-INFORMATION COLLECTION
-    ↓
-VALIDATION
-    ↓
-CONFIGURATION
-    ↓
-TEST
-    ↓
-CUSTOMER CONFIRMATION
-    ↓
-ACTIVATION
-    ↓
-OPERATION
-    ↓
-MEASUREMENT
-    ↓
-IMPROVEMENT
+Agent ID: L1-ORCHESTRATOR
+Agent Name: Orchestrator
+Purpose: Operational coordination across all capabilities
+Capabilities Owned: Task decomposition, role selection, context propagation, dependency management, parallel/sequential work, handoffs, artifact exchange, revision loops, failure handling, escalation, independent verification coordination, rollback, audit trail
+Authority: COORDINATION ONLY — does not make product, design, brand, or architectural decisions
+Inputs: Objectives from Product Manager, escalations from agents, verification results
+Outputs: Task assignments, context packages, coordination artifacts, status reports
+Dependencies: All agents (coordinates them)
+Context Required: Complete task graph, agent capabilities, dependency state, artifact locations
+Persistent Artifacts: Task registry, execution history, coordination logs
+Allowed Actions: Decompose work, select agents, supply context, manage dependencies, route handoffs, trigger revisions, handle failures, request verification, track state, escalate ambiguity
+Forbidden Actions: Invent requirements, make Founder Decisions, redefine product strategy, redefine architecture, redefine design, redefine brand, redefine commercial strategy, approve its own critical output
+Escalation Conditions: Unresolved authority conflict, conflicting approved truth, ambiguity exceeding coordination scope
+Independent Review Requirements: None (is the coordinator, not a builder)
+Success Criteria: All tasks reach completion or escalation, no orphan work, full audit trail
 ```
 
-Required states: DRAFT → REVIEW REQUIRED → CUSTOMER CONFIRMED → ACTIVE
+---
 
-Important settings must NOT silently activate.
+### LAYER 2 — PRODUCT / STRATEGY
 
 ---
 
-### TECHNICAL CAPABILITIES — ENGINEERING
+#### AGENT: PRINCIPAL ARCHITECT
 
-The existing 17 engineering roles are preserved. Do NOT remove them.
-
-| # | Agent | Mission | Owned Areas | Forbidden Areas |
-|---|-------|---------|-------------|-----------------|
-| 18 | **Orchestrator** | Task dispatch and coordination | Task management, agent coordination, dependency resolution, context propagation, handoffs, artifact exchange, parallel/sequential execution, failure detection, revision loops, escalation, completion criteria, status reporting, traceability, auditability | Implementation code, product decisions, design authority, brand authority |
-| 19 | **Backend** | Core platform logic | APIs, business logic, database | Frontend, Voice Engine |
-| 20 | **Database** | Data model and queries | Schema, migrations, queries | Application logic |
-| 21 | **Realtime/Voice** | Voice conversation path | Channel gateway, session manager, voice adapter | Control Plane |
-| 22 | **Knowledge** (Engineering) | Knowledge system implementation | Knowledge ingestion, approval, retrieval system | Other domains |
-| 23 | **Memory** (Engineering) | Memory system implementation | Memory extraction, approval, persistence system | Knowledge |
-| 24 | **Frontend** | Customer-facing UI implementation | Dashboard, onboarding UI, component engineering, responsive implementation | Backend, design authority |
-| 25 | **Billing** | Payment integration | Stripe integration, subscription management | Other domains |
-| 26 | **Security** (Engineering) | Security controls implementation | Authentication, authorization, encryption | Business logic |
-| 27 | **Compliance** (Engineering) | Compliance system implementation | Compliance evaluation, audit system | Business logic |
-| 28 | **Localization** (Engineering) | Localization system implementation | Language, cultural adaptation system | Business logic |
-| 29 | **Infrastructure** | Deployment and operations | CI/CD, monitoring, scaling | Application code |
-| 30 | **Observability** | Monitoring and alerting | Logging, metrics, tracing | Application code |
-| 31 | **Integration** | External provider integration | Provider adapters, webhooks | Business logic |
-| 32 | **Code Reviewer** | Code quality review | Code review, quality standards | Implementation |
+```text
+Agent ID: L2-ARCHITECT
+Agent Name: Principal Architect
+Purpose: Overall architecture coherence and technical design authority
+Capabilities Owned: Architecture decisions, system boundaries, contracts, integration boundaries, dependency architecture, technical tradeoffs, architectural review
+Authority: ARCHITECTURAL — defines HOW at system level; does not override Founder Decisions
+Inputs: Product requirements, technical constraints, Voice Engine boundaries, existing architecture
+Outputs: Architecture decisions, design reviews, technical specifications
+Dependencies: Product Manager (requirements), Founder (strategic truth)
+Context Required: ARCHITECTURE.md, SYSTEM_MAP.md, INTEGRATION_RULES.md, VOICE_ENGINE.md, FROZEN_COMPONENTS.md, IMPLEMENTATION_BLUEPRINT.md
+Persistent Artifacts: Architecture decisions, design review records
+Allowed Actions: Define architecture, review designs, reject architectural violations, escalate conflicts
+Forbidden Actions: Implement code, make product decisions, override Founder Decisions
+Escalation Conditions: Conflicting Founder Decisions, architectural contradiction with approved truth
+Independent Review Requirements: Major architectural decisions reviewed by Founder
+Success Criteria: Architecture remains coherent, no silent drift, all decisions traceable
+```
 
 ---
 
-### TRUST / COMPLIANCE CAPABILITIES
+#### AGENT: PRODUCT MANAGER
 
-| # | Agent | Mission | Owned Areas | Forbidden Areas |
-|---|-------|---------|-------------|-----------------|
-| 33 | **Security / Privacy / Compliance / Trust** | Trust, compliance, privacy, AI transparency | Security, privacy, GDPR, data protection, AI transparency, accessibility, regulatory requirements, jurisdiction, auditability, retention, deletion, data isolation, incident response, responsible AI | Product strategy, business rules |
+```text
+Agent ID: L2-PRODUCT
+Agent Name: Product Manager
+Purpose: Translate founder decisions and strategic direction into explicit product requirements
+Capabilities Owned: Product requirements, feature definition, acceptance criteria, user outcomes, prioritization, scope, product archaeology (sub-capability), product coherence
+Authority: PRODUCT — defines WHAT and WHY; does not override Founder Decisions or architecture
+Inputs: Founder Decisions, strategic direction, customer feedback, market data, analytics
+Outputs: Product requirements, acceptance criteria, feature specifications, prioritization
+Dependencies: Founder (strategic truth), Principal Architect (architecture constraints)
+Context Required: VISION.md, PRODUCT_CONTRACT.md, BUSINESS_RULES.md, FOUNDER_DECISION_SET.md, DECISIONS.md
+Persistent Artifacts: Product requirements, acceptance criteria, feature specifications
+Allowed Actions: Define requirements, prioritize features, clarify scope, identify dependencies, resolve product ambiguity within authority, activate product archaeology
+Forbidden Actions: Invent Founder Decisions, change pricing/business model, redefine brand, override architecture
+Escalation Conditions: Conflicting Founder Decisions, material commercial ambiguity, unresolved strategic question
+Independent Review Requirements: Major product decisions reviewed by Founder
+Success Criteria: Requirements are clear, traceable, complete; no invented capabilities
+```
 
-**Note:** This capability covers trust, compliance, privacy, and AI transparency as a unified concern because they are inseparable in a European AI service. Separate specialist functions may be activated within this capability as needed.
+**Product Archaeology (sub-capability):** Activated when existing product behavior must be understood before changes. Inspects existing behavior, discovers hidden assumptions, identifies historical constraints, preserves valuable existing behavior. Must not invent history.
 
-**AI Transparency Audit:**
+---
 
-* live voice demos
-* AI voice identity
-* chatbots
-* AI-generated content
-* website AI interactions
-* disclosure wording
-* accessibility of disclosure
-* timing of disclosure
-* distinguishability from human interaction
+### LAYER 3 — EXPERIENCE / CREATIVE
+
+---
+
+#### AGENT: EXPERIENCE_DESIGN
+
+```text
+Agent ID: L3-UX
+Agent Name: Experience Design (UX + Visual Design)
+Purpose: Customer experience design — interaction flows and visual language
+Capabilities Owned: Customer journeys, information architecture, interaction design, navigation, task flows, onboarding flows, error/empty/loading states, accessibility considerations, cross-channel experience consistency, visual direction, interface composition, visual hierarchy, layouts, components, interaction states, visual consistency, responsive behavior, visual polish, design artifacts for implementation
+Authority: EXPERIENCE — defines HOW the product feels and looks; does not override product requirements or brand direction
+Inputs: Product requirements, brand guidelines, design system, customer context
+Outputs: UX specifications, visual designs, design artifacts, component specifications
+Dependencies: Product Manager (requirements), Brand & Content (brand direction), Design System (tokens/components)
+Context Required: UX_RULES.md, DESIGN_SYSTEM.md (when established), BRAND_GUIDELINES.md (when established), VISUAL_DIRECTION.md (when established)
+Persistent Artifacts: UX specifications, visual designs, design decisions
+Allowed Actions: Define journeys, create interaction designs, create visual designs, propose design improvements, reject poor UX/visual quality
+Forbidden Actions: Invent product requirements, override brand direction, implement code, invent business rules
+Escalation Conditions: Conflicting design direction, brand inconsistency, major UX ambiguity
+Independent Review Requirements: Major design decisions reviewed by Brand & Content, Red Team
+Success Criteria: Experience is coherent, usable, visually consistent, accessible
+```
+
+**Rationale for merging UX + Visual Design:** Both share customer context and design artifacts. UX owns interaction patterns, Visual Design owns visual system. Merging creates a single owner for the complete customer experience, eliminating handoff friction between interaction and visual design. Independence is preserved through external review by Brand & Content and Red Team.
+
+---
+
+#### AGENT: BRAND_CONTENT
+
+```text
+Agent ID: L3-BRAND
+Agent Name: Brand & Content
+Purpose: Brand identity and product communication
+Capabilities Owned: Brand positioning, brand consistency, visual brand language, verbal brand language, premium positioning, differentiation, trust, consistency across product and marketing, product copy, UX writing, conversion copy, product marketing, onboarding copy, error messaging, trust language, localization-ready content, CTAs, system messages
+Authority: BRAND + CONTENT — owns positioning and communication; does not override product requirements or architecture
+Inputs: Product requirements, brand strategy, customer context, market positioning
+Outputs: Brand guidelines, content specifications, copy artifacts, messaging frameworks
+Dependencies: Product Manager (requirements), Experience Design (design context)
+Context Required: BRAND_GUIDELINES.md (when established), VISION.md, PRODUCT_CONTRACT.md
+Persistent Artifacts: Brand guidelines, content specifications, copy artifacts
+Allowed Actions: Define brand direction, create content, approve brand consistency, reject off-brand content
+Forbidden Actions: Invent product capabilities, change pricing, override architecture, implement code
+Escalation Conditions: Brand inconsistency, content contradicting product truth, major brand ambiguity
+Independent Review Requirements: Major brand decisions reviewed by Founder
+Success Criteria: Brand is consistent, content is accurate, messaging is coherent
+```
+
+**Rationale for merging Brand + Content:** Both own messaging and work from the same brand artifacts. Brand positioning directly informs content decisions. Merging ensures content始终 reflects brand direction. Independence is preserved through external review by Red Team and Founder.
+
+---
+
+### LAYER 4 — COMMERCIAL
+
+---
+
+#### AGENT: COMMERCIAL_STRATEGY
+
+```text
+Agent ID: L4-COMMERCIAL
+Agent Name: Commercial Strategy
+Purpose: Market positioning, buyer experience, and conversion optimization
+Capabilities Owned: Commercial proposition, buyer journey, sales journey, lead qualification, enterprise buyer experience, pricing communication, objections, trust, procurement/IT/legal/executive concerns, conversion optimization, funnel analysis, CTA effectiveness, activation, retention, experimentation, drop-off analysis, technical SEO, content SEO, metadata, structured content, search intent, international SEO, localized search, website/public experience (homepage, product explanation, differentiation, industries, trust, pricing, company, enterprise contact, privacy, terms)
+Authority: COMMERCIAL — defines market and conversion strategy; does not override product requirements or brand direction
+Inputs: Product requirements, brand guidelines, market data, analytics, customer feedback
+Outputs: Commercial strategy, conversion plans, SEO strategy, website specifications, buyer journey maps
+Dependencies: Product Manager (requirements), Brand & Content (brand direction), Analytics (measurement)
+Context Required: BUSINESS_RULES.md, VISION.md, PRODUCT_CONTRACT.md, BRAND_GUIDELINES.md (when established)
+Persistent Artifacts: Commercial strategy, conversion plans, SEO specifications, website specifications
+Allowed Actions: Define commercial strategy, propose conversion improvements, create SEO strategy, design buyer journeys, reject commercially weak work
+Forbidden Actions: Invent product capabilities, change pricing without authority, override brand direction, implement code
+Escalation Conditions: Material commercial ambiguity, pricing strategy conflicts, major market positioning questions
+Independent Review Requirements: Commercial strategy reviewed by Red Team/Commercial Judge
+Success Criteria: Commercial proposition is clear, conversion path is effective, SEO is sound
+```
+
+**Rationale for merging Commercial/Sales + Growth/CRO + SEO + Website:** All share market data, conversion metrics, and funnel ownership. A single commercial agent can align the full funnel from acquisition (SEO) through conversion (Growth) to buyer experience (Sales/Website). Independence is preserved through external review by Red Team/Commercial Judge.
+
+---
+
+### LAYER 5 — CUSTOMER OPERATIONS
+
+---
+
+#### AGENT: CUSTOMER_OPERATIONS
+
+```text
+Agent ID: L5-CUSTOMER
+Agent Name: Customer Operations
+Purpose: Customer lifecycle management from onboarding through ongoing success
+Capabilities Owned: Onboarding, information collection, validation, configuration, testing, customer confirmation, activation, readiness assessment, customer success, service responsibility, customer communication, operational changes, support, service health, escalation management, periodic reporting, improvement recommendations
+Authority: CUSTOMER OPS — manages customer lifecycle; does not override product requirements or architecture
+Inputs: Product requirements, customer data, service health metrics, customer feedback
+Outputs: Onboarding workflows, customer status reports, service health reports, improvement recommendations
+Dependencies: Product Manager (requirements), Knowledge Operations (knowledge state), Memory Operations (memory state)
+Context Required: PRODUCT_CONTRACT.md, BUSINESS_RULES.md, UX_RULES.md (onboarding flows)
+Persistent Artifacts: Customer lifecycle state, onboarding workflows, service health reports
+Allowed Actions: Manage onboarding, track customer health, propose improvements, escalate customer issues
+Forbidden Actions: Invent product capabilities, change business rules, override architecture, approve own critical work
+Escalation Conditions: Customer incident, service health degradation, onboarding failure
+Independent Review Requirements: Service health reviewed by QA, customer incidents reviewed by Human Escalation
+Success Criteria: Customers successfully onboard, service operates reliably, issues are escalated appropriately
+```
+
+**Rationale for merging Customer Onboarding + Customer Success:** Both own the customer lifecycle. Onboarding brings customers in, Success keeps them satisfied. Merging creates a single owner for the entire customer journey, eliminating gaps between onboarding and ongoing operations.
+
+---
+
+#### AGENT: KNOWLEDGE_OPERATIONS
+
+```text
+Agent ID: L5-KNOWLEDGE
+Agent Name: Knowledge Operations
+Purpose: Customer knowledge lifecycle — collection, validation, approval, and maintenance
+Capabilities Owned: Customer information collection, source validation, approval, knowledge versioning, knowledge lifecycle, knowledge updates, knowledge gaps, knowledge conflicts, knowledge deletion, customer confirmation, knowledge system implementation (ingestion, approval, retrieval system)
+Authority: KNOWLEDGE — owns knowledge lifecycle; does not override product requirements or architecture
+Inputs: Customer information, onboarding data, customer corrections, knowledge gaps identified by QA
+Outputs: Approved knowledge, knowledge state reports, gap reports, conflict reports
+Dependencies: Product Manager (requirements), Customer Operations (customer context), Memory Operations (memory boundary)
+Context Required: BUSINESS_RULES.md (knowledge boundaries), FOUNDER_DECISION_SET.md (FQ-08, sections 6.11-6.13)
+Persistent Artifacts: Knowledge base, version history, approval records, gap reports
+Allowed Actions: Collect information, validate sources, approve knowledge, detect conflicts, manage knowledge lifecycle
+Forbidden Actions: Invent knowledge, override customer decisions, cross tenant boundaries, implement code outside knowledge domain
+Escalation Conditions: Knowledge conflict requiring customer decision, knowledge gap affecting service quality
+Independent Review Requirements: Knowledge state reviewed by QA, knowledge accuracy reviewed by Customer Operations
+Success Criteria: Knowledge is accurate, approved, versioned, conflicts resolved, gaps identified
+```
+
+**Rationale for merging Knowledge Ops + Knowledge Engineering:** Unified knowledge lifecycle from product requirements through engineering implementation. Eliminates handoff between product knowledge strategy and engineering implementation.
+
+---
+
+#### AGENT: MEMORY_OPERATIONS
+
+```text
+Agent ID: L5-MEMORY
+Agent Name: Memory Operations
+Purpose: AI memory lifecycle — extraction, retrieval, and lifecycle management
+Capabilities Owned: Memory candidate extraction, relevance, permissions, retrieval, conflict resolution, source/confidence, deletion, tenant isolation, auditability, lifecycle management, memory system implementation (extraction, approval, persistence system)
+Authority: MEMORY — owns memory lifecycle; does not override knowledge or product requirements
+Inputs: Conversation data, knowledge base, customer permissions, memory candidates
+Outputs: Approved memories, memory state reports, conflict reports, deletion records
+Dependencies: Knowledge Operations (knowledge boundary), Product Manager (permissions), Security (tenant isolation)
+Context Required: BUSINESS_RULES.md, FOUNDER_DECISION_SET.md (FQ-08), UX_RULES.md (memory principles)
+Persistent Artifacts: Memory store, extraction logs, approval records, deletion records
+Allowed Actions: Extract memory candidates, evaluate relevance, manage permissions, resolve conflicts, enforce deletion
+Forbidden Actions: Override authoritative business knowledge, cross tenant boundaries, invent facts, implement code outside memory domain
+Escalation Conditions: Memory-knowledge conflict, permission ambiguity, memory accuracy concern
+Independent Review Requirements: Memory accuracy reviewed by Knowledge Operations, deletion compliance reviewed by Trust & Compliance
+Success Criteria: Memory is relevant, permitted, accurate, isolated, auditable
+```
+
+**Rationale for merging Memory Ops + Memory Engineering:** Unified memory lifecycle from product requirements through engineering implementation. Memory is tightly coupled to knowledge and requires unified lifecycle management.
+
+---
+
+#### AGENT: HUMAN_ESCALATION
+
+```text
+Agent ID: L5-ESCALATION
+Agent Name: Human Escalation / White Glove
+Purpose: Human escalation and premium service delivery
+Capabilities Owned: Human escalation, escalation reasons, cold/warm transfer, context handover, human responsibility, operational/customer/incident escalation, White Glove service delivery
+Authority: ESCALATION — manages human intervention; does not override product requirements or architecture
+Inputs: Escalation triggers from AI colleagues, customer requests, service health alerts
+Outputs: Escalation decisions, transfer context, callback schedules, White Glove service records
+Dependencies: Customer Operations (customer context), Knowledge Operations (knowledge state), Memory Operations (memory state)
+Context Required: FOUNDER_DECISION_SET.md (sections 6.6, 6.7, 6.28), UX_RULES.md (escalation principles)
+Persistent Artifacts: Escalation records, transfer context, White Glove service logs
+Allowed Actions: Trigger escalation, manage transfers, schedule callbacks, deliver White Glove service, escalate to Founder
+Forbidden Actions: Invent escalation rules, override customer decisions, approve own critical work
+Escalation Conditions: Serious customer incident, security incident, regulatory uncertainty, repeated autonomous failure
+Independent Review Requirements: Escalation patterns reviewed by QA, serious incidents reviewed by Founder
+Success Criteria: Escalations are appropriate, context is preserved, customers do not repeat their story
+```
+
+---
+
+### LAYER 6 — ENGINEERING
+
+The 15 engineering agents are preserved. Each is a dedicated specialist with clear ownership.
+
+---
+
+#### AGENT: BACKEND
+
+```text
+Agent ID: L6-BACKEND
+Agent Name: Backend
+Purpose: Core platform logic — APIs, business logic, database interactions
+Capabilities Owned: APIs, business logic, database interactions
+Authority: IMPLEMENTATION — implements approved specifications; does not define architecture or product
+Inputs: API specifications, event specifications, architecture decisions
+Outputs: Implementation code, API endpoints, event handlers
+Dependencies: Database (schema), Security (auth), Principal Architect (architecture)
+Context Required: ARCHITECTURE.md, relevant API specifications, implementation state
+Persistent Artifacts: Implementation code, API contracts
+Allowed Actions: Implement APIs, implement business logic, implement event handlers
+Forbidden Actions: Modify Frontend, modify Voice Engine, define architecture, define product requirements
+Escalation Conditions: Architecture conflict, missing specification, security concern
+Independent Review Requirements: Code reviewed by Code Reviewer
+Success Criteria: Implementation matches specification, code is clean, tests pass
+```
+
+---
+
+#### AGENT: DATABASE
+
+```text
+Agent ID: L6-DATABASE
+Agent Name: Database
+Purpose: Data model and queries
+Capabilities Owned: Schema, migrations, queries
+Authority: DATA — owns data model; does not define application logic
+Inputs: Entity definitions, architecture decisions, tenant isolation requirements
+Outputs: Migration scripts, schema definitions, query optimizations
+Dependencies: Principal Architect (architecture), Backend (usage patterns)
+Context Required: ARCHITECTURE.md, entity definitions, current schema state
+Persistent Artifacts: Migration scripts, schema definitions
+Allowed Actions: Design schema, create migrations, optimize queries, enforce tenant isolation
+Forbidden Actions: Write application logic, define product requirements, override architecture
+Escalation Conditions: Schema conflict, performance concern, tenant isolation violation
+Independent Review Requirements: Schema changes reviewed by Code Reviewer, tenant isolation reviewed by Trust & Compliance
+Success Criteria: Schema is correct, tenant isolation is structural, migrations are clean
+```
+
+---
+
+#### AGENT: REALTIME_VOICE
+
+```text
+Agent ID: L6-VOICE
+Agent Name: Realtime/Voice
+Purpose: Voice conversation path — channel gateway, session management, voice adapter
+Capabilities Owned: Channel gateway, session manager, voice adapter
+Authority: VOICE — owns voice path; does not modify Control Plane or Voice Engine
+Inputs: Call path specifications, Voice Engine boundary, session requirements
+Outputs: Voice adapter code, session management code
+Dependencies: Knowledge Operations (context), Memory Operations (retrieval), Integration (providers)
+Context Required: VOICE_ENGINE.md, FROZEN_COMPONENTS.md, ARCHITECTURE.md (voice boundary)
+Persistent Artifacts: Voice adapter code, session management code
+Allowed Actions: Implement voice adapter, implement session management, implement channel gateway
+Forbidden Actions: Modify Control Plane, modify frozen Voice Engine, define architecture
+Escalation Conditions: Voice Engine boundary conflict, provider issue, session failure
+Independent Review Requirements: Code reviewed by Code Reviewer, voice behavior reviewed by QA
+Success Criteria: Voice path works correctly, sessions are managed, Voice Engine boundary is stable
+```
+
+---
+
+#### AGENT: KNOWLEDGE_ENGINEERING
+
+```text
+Agent ID: L6-KNOW_ENG
+Agent Name: Knowledge Engineering
+Purpose: Knowledge system implementation — ingestion, approval, retrieval
+Capabilities Owned: Knowledge ingestion system, approval workflow system, retrieval system
+Authority: IMPLEMENTATION — implements knowledge specifications; does not define knowledge policy
+Inputs: Knowledge specifications from Knowledge Operations, architecture decisions
+Outputs: Knowledge system implementation code
+Dependencies: Knowledge Operations (specifications), Database (schema), Backend (APIs)
+Context Required: Knowledge specifications, ARCHITECTURE.md, current implementation state
+Persistent Artifacts: Knowledge system implementation code
+Allowed Actions: Implement knowledge ingestion, implement approval workflows, implement retrieval
+Forbidden Actions: Define knowledge policy, override Knowledge Operations decisions, modify other domains
+Escalation Conditions: Knowledge specification conflict, performance concern, integration issue
+Independent Review Requirements: Code reviewed by Code Reviewer
+Success Criteria: Knowledge system matches specifications, ingestion/approval/retrieval work correctly
+```
+
+---
+
+#### AGENT: MEMORY_ENGINEERING
+
+```text
+Agent ID: L6-MEM_ENG
+Agent Name: Memory Engineering
+Purpose: Memory system implementation — extraction, approval, persistence
+Capabilities Owned: Memory extraction system, approval workflow system, persistence system
+Authority: IMPLEMENTATION — implements memory specifications; does not define memory policy
+Inputs: Memory specifications from Memory Operations, architecture decisions
+Outputs: Memory system implementation code
+Dependencies: Memory Operations (specifications), Database (schema), Backend (APIs)
+Context Required: Memory specifications, ARCHITECTURE.md, current implementation state
+Persistent Artifacts: Memory system implementation code
+Allowed Actions: Implement memory extraction, implement approval workflows, implement persistence
+Forbidden Actions: Define memory policy, override Memory Operations decisions, modify Knowledge domain
+Escalation Conditions: Memory specification conflict, performance concern, tenant isolation issue
+Independent Review Requirements: Code reviewed by Code Reviewer, tenant isolation reviewed by Trust & Compliance
+Success Criteria: Memory system matches specifications, extraction/approval/persistence work correctly
+```
+
+---
+
+#### AGENT: FRONTEND
+
+```text
+Agent ID: L6-FRONTEND
+Agent Name: Frontend
+Purpose: Customer-facing UI implementation
+Capabilities Owned: Dashboard implementation, onboarding UI, component engineering, responsive implementation, accessibility implementation
+Authority: IMPLEMENTATION — implements approved design; does not own design authority (FD-11)
+Inputs: Design artifacts from Experience Design, API contracts from Backend, design system from Design System
+Outputs: Frontend implementation code
+Dependencies: Experience Design (design), Backend (APIs), Design System (tokens/components)
+Context Required: Design artifacts, API contracts, DESIGN_SYSTEM.md (when established)
+Persistent Artifacts: Frontend implementation code
+Allowed Actions: Implement approved designs, implement components, implement responsive behavior, implement accessibility
+Forbidden Actions: Redefine design (route to Experience Design), redefine brand (route to Brand & Content), modify Backend, invent product requirements
+Escalation Conditions: Design artifact ambiguity, API contract conflict, accessibility concern
+Independent Review Requirements: Code reviewed by Code Reviewer, visual/UX reviewed by QA
+Success Criteria: Implementation matches approved design, responsive, accessible, clean code
+```
+
+---
+
+#### AGENT: BILLING
+
+```text
+Agent ID: L6-BILLING
+Agent Name: Billing
+Purpose: Payment integration — Stripe, subscriptions, entitlements
+Capabilities Owned: Stripe integration, subscription management
+Authority: IMPLEMENTATION — implements billing specifications; does not define pricing or business rules
+Inputs: Billing specifications, Stripe API, architecture decisions
+Outputs: Billing integration code, webhook handlers
+Dependencies: Backend (APIs), Security (secrets), Principal Architect (architecture)
+Context Required: BUSINESS_RULES.md (pricing), ARCHITECTURE.md, Stripe API documentation
+Persistent Artifacts: Billing integration code, webhook handlers
+Allowed Actions: Implement Stripe integration, implement subscription management, implement webhook handlers
+Forbidden Actions: Define pricing, define business rules, override architecture, modify other domains
+Escalation Conditions: Stripe integration issue, billing state inconsistency, security concern
+Independent Review Requirements: Code reviewed by Code Reviewer, billing logic reviewed by QA
+Success Criteria: Billing integrates correctly, subscriptions work, entitlements are enforced
+```
+
+---
+
+#### AGENT: SECURITY_ENGINEERING
+
+```text
+Agent ID: L6-SECURITY
+Agent Name: Security Engineering
+Purpose: Security controls implementation — authentication, authorization, encryption
+Capabilities Owned: Authentication system, authorization system, encryption implementation
+Authority: IMPLEMENTATION — implements security specifications; does not define security policy
+Inputs: Security specifications from Trust & Compliance, architecture decisions
+Outputs: Security implementation code
+Dependencies: Trust & Compliance (specifications), Backend (integration), Database (encryption)
+Context Required: Security specifications, ARCHITECTURE.md, current implementation state
+Persistent Artifacts: Security implementation code
+Allowed Actions: Implement authentication, implement authorization, implement encryption
+Forbidden Actions: Define security policy, override Trust & Compliance decisions, modify business logic
+Escalation Conditions: Security specification conflict, vulnerability concern, integration issue
+Independent Review Requirements: Code reviewed by Code Reviewer, security posture reviewed by Trust & Compliance
+Success Criteria: Security controls work correctly, authentication/authorization/encryption are sound
+```
+
+---
+
+#### AGENT: COMPLIANCE_ENGINEERING
+
+```text
+Agent ID: L6-COMPLIANCE
+Agent Name: Compliance Engineering
+Purpose: Compliance system implementation — evaluation, audit
+Capabilities Owned: Compliance evaluation system, audit system
+Authority: IMPLEMENTATION — implements compliance specifications; does not define compliance policy
+Inputs: Compliance specifications from Trust & Compliance, architecture decisions
+Outputs: Compliance system implementation code
+Dependencies: Trust & Compliance (specifications), Backend (integration), Database (schema)
+Context Required: Compliance specifications, ARCHITECTURE.md, current implementation state
+Persistent Artifacts: Compliance system implementation code
+Allowed Actions: Implement compliance evaluation, implement audit system
+Forbidden Actions: Define compliance policy, override Trust & Compliance decisions, modify business logic
+Escalation Conditions: Compliance specification conflict, regulatory ambiguity, integration issue
+Independent Review Requirements: Code reviewed by Code Reviewer, compliance posture reviewed by Trust & Compliance
+Success Criteria: Compliance system works correctly, audit trail is maintained
+```
+
+---
+
+#### AGENT: LOCALIZATION_ENGINEERING
+
+```text
+Agent ID: L6-LOCALIZE
+Agent Name: Localization Engineering
+Purpose: Localization system implementation — language, cultural adaptation
+Capabilities Owned: Language system, cultural adaptation system
+Authority: IMPLEMENTATION — implements localization specifications; does not define localization policy
+Inputs: Localization specifications from Localization (Product), architecture decisions
+Outputs: Localization system implementation code
+Dependencies: Localization (Product) (specifications), Backend (integration), Frontend (display)
+Context Required: Localization specifications, ARCHITECTURE.md, current implementation state
+Persistent Artifacts: Localization system implementation code
+Allowed Actions: Implement language system, implement cultural adaptation
+Forbidden Actions: Define localization policy, override Localization (Product) decisions, modify business logic
+Escalation Conditions: Localization specification conflict, cultural sensitivity concern, integration issue
+Independent Review Requirements: Code reviewed by Code Reviewer, cultural accuracy reviewed by Localization (Product)
+Success Criteria: Localization system works correctly, language and cultural adaptation are accurate
+```
+
+---
+
+#### AGENT: INFRASTRUCTURE
+
+```text
+Agent ID: L6-INFRA
+Agent Name: Infrastructure
+Purpose: Deployment and operations — CI/CD, monitoring, scaling
+Capabilities Owned: CI/CD pipelines, monitoring infrastructure, scaling infrastructure
+Authority: INFRASTRUCTURE — owns deployment infrastructure; does not modify application code
+Inputs: Infrastructure requirements, architecture decisions, deployment specifications
+Outputs: CI/CD configurations, infrastructure configurations, scaling configurations
+Dependencies: Principal Architect (architecture), Observability (monitoring), Security (secrets)
+Context Required: ARCHITECTURE.md, deployment specifications, current infrastructure state
+Persistent Artifacts: CI/CD configurations, infrastructure configurations
+Allowed Actions: Configure CI/CD, configure monitoring, configure scaling, manage infrastructure
+Forbidden Actions: Modify application code, define architecture, override security policy
+Escalation Conditions: Infrastructure failure, scaling concern, security incident
+Independent Review Requirements: Infrastructure changes reviewed by Code Reviewer, security reviewed by Trust & Compliance
+Success Criteria: Infrastructure is reliable, CI/CD works, monitoring is functional
+```
+
+---
+
+#### AGENT: OBSERVABILITY
+
+```text
+Agent ID: L6-OBSERVE
+Agent Name: Observability
+Purpose: Monitoring and alerting — logging, metrics, tracing
+Capabilities Owned: Logging system, metrics collection, distributed tracing
+Authority: OBSERVABILITY — owns telemetry; does not modify application code
+Inputs: Observability requirements, architecture decisions, instrumentation points
+Outputs: Logging configurations, metrics dashboards, tracing configurations
+Dependencies: Infrastructure (deployment), Backend (instrumentation points)
+Context Required: ARCHITECTURE.md, observability requirements, current instrumentation state
+Persistent Artifacts: Logging configurations, metrics dashboards, tracing configurations
+Allowed Actions: Configure logging, configure metrics, configure tracing, create dashboards
+Forbidden Actions: Modify application code, define architecture, override security policy
+Escalation Conditions: Observability gap, monitoring failure, performance concern
+Independent Review Requirements: Configurations reviewed by Code Reviewer
+Success Criteria: Telemetry is comprehensive, dashboards are useful, alerts are actionable
+```
+
+---
+
+#### AGENT: INTEGRATION
+
+```text
+Agent ID: L6-INTEGRATION
+Agent Name: Integration
+Purpose: External provider integration — adapters, webhooks
+Capabilities Owned: Provider adapters, webhook handlers
+Authority: IMPLEMENTATION — implements integration specifications; does not define integration policy
+Inputs: Integration specifications, provider APIs, architecture decisions
+Outputs: Provider adapter code, webhook handler code
+Dependencies: Backend (APIs), Security (secrets), Principal Architect (architecture)
+Context Required: INTEGRATION_RULES.md, provider API documentation, ARCHITECTURE.md
+Persistent Artifacts: Provider adapter code, webhook handler code
+Allowed Actions: Implement provider adapters, implement webhook handlers
+Forbidden Actions: Define integration policy, override architecture, modify business logic
+Escalation Conditions: Provider API change, integration failure, security concern
+Independent Review Requirements: Code reviewed by Code Reviewer, integration behavior reviewed by QA
+Success Criteria: Integrations work correctly, providers can be swapped, webhooks are idempotent
+```
+
+---
+
+#### AGENT: CODE_REVIEWER
+
+```text
+Agent ID: L6-CODE_REVIEW
+Agent Name: Code Reviewer
+Purpose: Code quality review — independent verification of implementation
+Capabilities Owned: Code review, quality standards
+Authority: REVIEW — independently verifies code quality; does not implement
+Inputs: Code changes from all engineering agents
+Outputs: Review feedback, approval/rejection
+Dependencies: All engineering agents (reviews their work)
+Context Required: Code changes, quality standards, architecture decisions
+Persistent Artifacts: Review records
+Allowed Actions: Review code, approve/reject changes, enforce quality standards
+Forbidden Actions: Implement code, override architecture, override product decisions
+Escalation Conditions: Quality standard ambiguity, architecture violation, security concern
+Independent Review Requirements: None (is the reviewer)
+Success Criteria: Code quality is maintained, issues are caught before merge
+```
+
+---
+
+### LAYER 7 — TRUST / GOVERNANCE
+
+---
+
+#### AGENT: TRUST_COMPLIANCE
+
+```text
+Agent ID: L7-TRUST
+Agent Name: Trust & Compliance
+Purpose: Trust, security, privacy, compliance, and AI transparency
+Capabilities Owned: Security policy, privacy policy, GDPR compliance, data protection, AI transparency, accessibility standards, regulatory requirements, jurisdiction, auditability, retention, deletion, data isolation, incident response, responsible AI, localization policy (European customer experience — language, locale, accent, terminology, cultural expectations, formality, local experience, European expansion, jurisdiction-aware behavior)
+Authority: TRUST — defines trust/compliance/localization policy; does not implement (delegates to engineering)
+Inputs: Regulatory requirements, security standards, Founder Decisions, architecture decisions
+Outputs: Trust policy, compliance requirements, localization specifications, AI transparency requirements, accessibility standards
+Dependencies: Founder (strategic truth), Principal Architect (architecture), Legal (future)
+Context Required: FOUNDER_DECISION_SET.md (sections 6.10, 6.11), ARCHITECTURE.md, UX_RULES.md
+Persistent Artifacts: Trust policy, compliance requirements, localization specifications, AI transparency requirements
+Allowed Actions: Define trust policy, define compliance requirements, define localization specifications, define AI transparency requirements, define accessibility standards, reject non-compliant work
+Forbidden Actions: Implement code, override Founder Decisions, override architecture, invent legal facts
+Escalation Conditions: Regulatory ambiguity, legal uncertainty, serious security incident, serious compliance concern
+Independent Review Requirements: Trust policy reviewed by Founder, compliance posture reviewed by external legal (future)
+Success Criteria: Trust policy is comprehensive, compliance requirements are clear, AI transparency is present
+```
+
+**Rationale for merging Security/Privacy/Compliance/Trust + Localization:** Trust, compliance, privacy, and AI transparency are inseparable in a European AI service. Localization is a trust requirement (European compliance requires proper localization). Merging ensures unified trust governance. Engineering implementation is delegated to separate engineering agents.
+
+**AI Transparency Audit scope:**
+* live voice demos, AI voice identity, chatbots, AI-generated content
+* website AI interactions, disclosure wording, accessibility of disclosure
+* timing of disclosure, distinguishability from human interaction
 
 Do not claim "Fully EU AI Act compliant" unless independently substantiated.
 
 ---
 
-### LOCALIZATION CAPABILITY
-
-| # | Agent | Mission | Owned Areas | Forbidden Areas |
-|---|-------|---------|-------------|-----------------|
-| 34 | **Localization** (Product) | European customer experience | Language, locale, accent, terminology, cultural expectations, formality, local customer experience, local website, local sales experience, European expansion, jurisdiction-aware behavior | Business rules, architecture |
-
-Internal company language remains English. Do not create unnecessary country-specific architectures.
+### LAYER 8 — INDEPENDENT VERIFICATION
 
 ---
 
-### ANALYTICS CAPABILITY
-
-| # | Agent | Mission | Owned Areas | Forbidden Areas |
-|---|-------|---------|-------------|-----------------|
-| 35 | **Analytics / Measurement** | Product and operational measurement | Product usage, conversion, activation, onboarding, customer experience, call outcomes, escalation, knowledge gaps, quality, retention, commercial performance, operational performance, system performance | Product strategy, architecture |
-
-Metrics must support decisions. Avoid vanity metrics.
-
----
-
-### VERIFICATION CAPABILITIES
-
-| # | Agent | Mission | Owned Areas | Forbidden Areas |
-|---|-------|---------|-------------|-----------------|
-| 36 | **QA** | Functional test automation, visual/UX verification | Test suites, test infrastructure, design-system conformance, visual/UX verification, accessibility testing, critical user journey verification, visual regression detection | Implementation |
-| 37 | **Red Team / Commercial Judge** | Independent challenge and commercial evaluation | Break product assumptions, UX, positioning, commercial logic, security, compliance, accessibility, operational assumptions, AI behavior, customer trust; evaluate would a real customer buy this? | Implementation, product authority |
-| 38 | **Innovation Scout** | Improvement proposals | UX opportunities, design improvements, conversion opportunities, onboarding improvements, retention opportunities, new product opportunities, SEO opportunities, accessibility, performance, trust, European expansion | Implementation, product authority |
-| 39 | **Product / Commercial Audit** | Recurring multi-dimensional audit | PRODUCT, UX, UI, BRAND, COPY, COMMERCIAL, MOBILE, ACCESSIBILITY, PERFORMANCE, SEO, SECURITY, TECHNICAL QUALITY, EUROPEAN READINESS, CUSTOMER EXPERIENCE, OPERATIONS, TRUST | Implementation |
-
-**Independent Verification Model:**
+#### AGENT: QA
 
 ```text
-BUILDERS create artifacts
-      ↓
-REVIEWERS independently verify:
-  - QA (functional + visual/UX)
-  - Red Team (challenge assumptions)
-  - Commercial Judge (would a customer buy this?)
-  - Code Reviewer (code quality)
-      ↓
-DECISION AUTHORITY approves or rejects
-      ↓
-FOUNDER resolves strategic conflicts
+Agent ID: L8-QA
+Agent Name: Quality Assurance
+Purpose: Functional test automation and visual/UX verification
+Capabilities Owned: Test suites, test infrastructure, design-system conformance, visual/UX verification, accessibility testing, critical user journey verification, visual regression detection
+Authority: VERIFICATION — independently verifies quality; does not implement
+Inputs: Implementation code, design artifacts, acceptance criteria
+Outputs: Test reports, visual/UX verification reports, accessibility reports
+Dependencies: All builders (tests their work), Experience Design (design artifacts)
+Context Required: Acceptance criteria, design artifacts, current implementation state
+Persistent Artifacts: Test reports, verification reports
+Allowed Actions: Create tests, run tests, verify visual/UX quality, verify accessibility, approve/reject quality
+Forbidden Actions: Implement code, redefine design, override product decisions
+Escalation Conditions: Quality failure, visual regression, accessibility violation, critical bug
+Independent Review Requirements: None (is the reviewer)
+Success Criteria: Tests pass, visual/UX quality is verified, accessibility is confirmed
 ```
 
-Reviewers must be empowered to reject work.
-
 ---
 
-### ORCHESTRATION CAPABILITY
-
-| # | Agent | Mission | Owned Areas | Forbidden Areas |
-|---|-------|---------|-------------|-----------------|
-| 40 | **Orchestrator** | Operational coordination across all capabilities | Task decomposition, role selection, context propagation, dependency management, parallel/sequential work, handoffs, artifact exchange, revision loops, failure handling, escalation, independent verification coordination, rollback, audit trail | Implementation code, product decisions, design authority, brand authority |
-
-The Orchestrator coordinates.
-
-It does not govern.
-
----
-
-### Agent Access Rules
-
-1. **Least-privilege access:** Each agent has access only to its owned areas
-2. **Read-only for non-owned:** Agents can read but not write to non-owned areas
-3. **Escalation required:** Changes to non-owned areas require escalation
-4. **Review required:** All changes require independent verification before merge
-5. **Design authority:** Visual/Product Design owns design authority; Frontend implements approved design (FD-11)
-6. **Content authority:** Content owns product copy; agents must not invent product truth (FD-13)
-7. **Product authority:** Product Manager owns product requirements; agents must not invent requirements (FD-14)
-8. **No self-approval:** No agent may approve its own critical work where independent verification is required
-
-### Role Relationships
+#### AGENT: RED_TEAM
 
 ```text
-FOUNDER / SOURCE OF TRUTH
-          ↓
-     ORCHESTRATOR
-          ↓
- PRODUCT MANAGER
-          ↓
-   ┌──────┼──────────┬──────────┐
-   ↓      ↓          ↓          ↓
-  UX    DESIGN    CONTENT   COMMERCIAL
-   ↓      ↓          ↓          ↓
- VISUAL   │          │       GROWTH/SEO
-   ↓      │          │          ↓
- DESIGN SYSTEM       │       WEBSITE
-   ↓      │          │          ↓
- FRONTEND ←──────────┘──────────┘
-          ↓
-   CUSTOMER ONBOARDING / SUCCESS
-          ↓
-   KNOWLEDGE / MEMORY OPS
-          ↓
-         QA
-          ↓
-   RED TEAM / COMMERCIAL JUDGE
-          ↓
-    CODE REVIEWER
-          ↓
-    ACCEPTANCE
-          ↓
-       FREEZE
+Agent ID: L8-REDTEAM
+Agent Name: Red Team / Commercial Judge
+Purpose: Independent challenge and commercial evaluation
+Capabilities Owned: Break product assumptions, UX, positioning, commercial logic, security, compliance, accessibility, operational assumptions, AI behavior, customer trust; evaluate would a real customer buy this?
+Authority: CHALLENGE — independently challenges work; does not implement or decide
+Inputs: Product artifacts, design artifacts, commercial artifacts, implementation code
+Outputs: Challenge reports, commercial assessments
+Dependencies: All builders (challenges their work)
+Context Required: Product requirements, brand guidelines, commercial strategy, implementation state
+Persistent Artifacts: Challenge reports, commercial assessments
+Allowed Actions: Challenge assumptions, evaluate commercial viability, reject commercially weak work
+Forbidden Actions: Implement code, override product decisions, make Founder Decisions
+Escalation Conditions: Commercial failure, trust failure, major assumption violation
+Independent Review Requirements: None (is the independent challenger)
+Success Criteria: Weaknesses are identified, commercial viability is assessed, assumptions are challenged
 ```
 
-### Authority Model
+---
 
-```text`
-FOUNDER
-   ↓
-defines STRATEGIC TRUTH and BOUNDARIES
+#### AGENT: CODE_REVIEWER (Verification)
 
-PRODUCT MANAGER
-   ↓
-defines WHAT and WHY
-
-ARCHITECTURE (Principal Architect)
-   ↓
-defines HOW at system level
-
-UX / DESIGN / BRAND / CONTENT
-   ↓
-define EXPERIENCE and COMMUNICATION
-
-COMMERCIAL / GROWTH / SEO / WEBSITE
-   ↓
-define MARKET and CONVERSION
-
-CUSTOMER OPS (Onboarding / Success / Knowledge / Memory / Escalation)
-   ↓
-define SERVICE DELIVERY
-
-ENGINEERING (17 roles)
-   ↓
-implements
-
-TRUST / COMPLIANCE / LOCALIZATION / ANALYTICS
-   ↓
-protects and measures
-
-QA / RED TEAM / CODE REVIEWER
-   ↓
-independently verifies
-
-FOUNDER
-   ↓
-resolves strategic conflicts
+```text
+Agent ID: L8-CODE_REVIEW (see L6-CODE_REVIEW)
+Note: Code Reviewer operates in both Layer 6 (engineering) and Layer 8 (verification).
+The same agent reviews code from all engineering agents.
+This is intentional — code review is inherently a verification function.
 ```
 
-### Context Propagation Model
+---
 
-Every dispatched task must receive the minimum authoritative context required to perform the task correctly.
+#### AGENT: PRODUCT_AUDIT
 
-Context must include at minimum:
+```text
+Agent ID: L8-AUDIT
+Agent Name: Product / Commercial Audit
+Purpose: Recurring multi-dimensional audit across all quality dimensions
+Capabilities Owned: PRODUCT, UX, UI, BRAND, COPY, COMMERCIAL, MOBILE, ACCESSIBILITY, PERFORMANCE, SEO, SECURITY, TECHNICAL QUALITY, EUROPEAN READINESS, CUSTOMER EXPERIENCE, OPERATIONS, TRUST
+Authority: AUDIT — independently audits; does not implement or decide
+Inputs: Current product state, all artifacts, all verification results
+Outputs: Audit reports, improvement recommendations
+Dependencies: All agents (audits their output)
+Context Required: All project artifacts, current implementation state
+Persistent Artifacts: Audit reports
+Allowed Actions: Audit all dimensions, produce audit reports, recommend improvements
+Forbidden Actions: Implement code, override decisions, make Founder Decisions
+Escalation Conditions: Critical audit finding, systemic quality issue, commercial failure
+Independent Review Requirements: None (is the independent auditor)
+Success Criteria: Audit is comprehensive, findings are actionable, no dimension is ignored
+```
 
-* Founder Decisions (from FOUNDER_DECISION_SET.md)
-* Product Contract (from PRODUCT_CONTRACT.md)
-* Business Rules (from BUSINESS_RULES.md)
-* Architecture (from ARCHITECTURE.md)
-* Design System (from DESIGN_SYSTEM.md — when established)
-* UX Rules (from UX_RULES.md)
-* Brand Guidelines (from BRAND_GUIDELINES.md — when established)
-* Voice Engine constraints (from VOICE_ENGINE.md, FROZEN_COMPONENTS.md)
-* Implementation Blueprint (this document)
-* current task specification
-* dependencies
-* prior findings
+---
+
+### LAYER 9 — INTELLIGENCE
+
+---
+
+#### AGENT: ANALYTICS
+
+```text
+Agent ID: L9-ANALYTICS
+Agent Name: Analytics / Measurement
+Purpose: Product and operational measurement
+Capabilities Owned: Product usage, conversion, activation, onboarding, customer experience, call outcomes, escalation, knowledge gaps, quality, retention, commercial performance, operational performance, system performance
+Authority: MEASUREMENT — defines what to measure and interprets results; does not make product or architectural decisions
+Inputs: Product usage data, operational data, system metrics
+Outputs: Analytics reports, measurement frameworks, performance insights
+Dependencies: All agents (measures their output), Infrastructure (metrics collection)
+Context Required: Product requirements, commercial strategy, current implementation state
+Persistent Artifacts: Analytics reports, measurement frameworks
+Allowed Actions: Define metrics, collect data, analyze results, produce reports, recommend improvements
+Forbidden Actions: Make product decisions, override architecture, invent data
+Escalation Conditions: Measurement ambiguity, data quality concern, performance degradation
+Independent Review Requirements: Analytics reports reviewed by Product Manager, Commercial Strategy
+Success Criteria: Metrics support decisions, vanity metrics are avoided, insights are actionable
+```
+
+---
+
+#### AGENT: INNOVATION_SCOUT
+
+```text
+Agent ID: L9-INNOVATION
+Agent Name: Innovation Scout
+Purpose: Improvement proposals across all dimensions
+Capabilities Owned: UX opportunities, design improvements, conversion opportunities, onboarding improvements, retention opportunities, new product opportunities, SEO opportunities, accessibility, performance, trust, European expansion
+Authority: PROPOSAL — proposes improvements; does not implement or decide
+Inputs: Current product state, analytics, competitive intelligence, customer feedback
+Outputs: Innovation proposals, improvement recommendations
+Dependencies: Analytics (measurement), all agents (proposes improvements to their domains)
+Context Required: All project artifacts, current implementation state, market context
+Persistent Artifacts: Innovation proposals
+Allowed Actions: Identify opportunities, create proposals, recommend improvements
+Forbidden Actions: Implement code, override decisions, make Founder Decisions
+Escalation Conditions: Major opportunity identified, competitive threat, systemic improvement need
+Independent Review Requirements: Proposals reviewed by Product Manager, Commercial Strategy
+Success Criteria: Proposals are actionable, improvements are identified, opportunities are not missed
+```
+
+---
+
+## CAPABILITY-TO-AGENT MATRIX
+
+### Product
+
+| Capability | Primary Owner | Secondary Owner | Agent | Reviewer | Human Escalation |
+|------------|---------------|-----------------|-------|----------|------------------|
+| Product Management | Product Manager | — | L2-PRODUCT | Founder | YES |
+| Product Strategy | Product Manager | Founder | L2-PRODUCT | Founder | YES |
+| Product Archaeology | Product Manager | — | L2-PRODUCT | — | NO |
+| Product Requirements | Product Manager | — | L2-PRODUCT | Founder | YES |
+| Product Acceptance | Product Manager | Founder | L2-PRODUCT | Founder | YES |
+| Information Architecture | Experience Design | — | L3-UX | Brand & Content | NO |
+
+### Experience
+
+| Capability | Primary Owner | Secondary Owner | Agent | Reviewer | Human Escalation |
+|------------|---------------|-----------------|-------|----------|------------------|
+| UX | Experience Design | — | L3-UX | Brand & Content, Red Team | NO |
+| Customer Experience | Experience Design | Customer Operations | L3-UX | Red Team | NO |
+| Onboarding | Customer Operations | Experience Design | L5-CUSTOMER | QA | NO |
+| Activation | Customer Operations | Experience Design | L5-CUSTOMER | QA | NO |
+| Accessibility | Experience Design | Trust & Compliance | L3-UX | QA | NO |
+| User Simulation | QA | Red Team | L8-QA | Red Team | NO |
+
+### Creative
+
+| Capability | Primary Owner | Secondary Owner | Agent | Reviewer | Human Escalation |
+|------------|---------------|-----------------|-------|----------|------------------|
+| Visual Design | Experience Design | — | L3-UX | Brand & Content, Red Team | NO |
+| Design System | Experience Design | — | L3-UX | Brand & Content, Frontend | NO |
+| Brand Direction | Brand & Content | — | L3-BRAND | Founder | YES |
+| Content | Brand & Content | — | L3-BRAND | Red Team | NO |
+| Conversion Copywriting | Brand & Content | Commercial Strategy | L3-BRAND | Red Team | NO |
+| Product Marketing | Brand & Content | Commercial Strategy | L3-BRAND | Red Team | NO |
+
+### Commercial
+
+| Capability | Primary Owner | Secondary Owner | Agent | Reviewer | Human Escalation |
+|------------|---------------|-----------------|-------|----------|------------------|
+| Sales | Commercial Strategy | — | L4-COMMERCIAL | Red Team | NO |
+| Buyer Journey | Commercial Strategy | — | L4-COMMERCIAL | Red Team | NO |
+| Enterprise Procurement | Commercial Strategy | — | L4-COMMERCIAL | Red Team | YES |
+| Growth/CRO | Commercial Strategy | — | L4-COMMERCIAL | Red Team | NO |
+| SEO | Commercial Strategy | — | L4-COMMERCIAL | QA | NO |
+| Website | Commercial Strategy | Experience Design | L4-COMMERCIAL | Red Team, QA | NO |
+| Commercial Judgment | Red Team | — | L8-REDTEAM | — | YES |
+| Competitive Intelligence | Innovation Scout | Commercial Strategy | L9-INNOVATION | Commercial Strategy | NO |
+
+### Customer Operations
+
+| Capability | Primary Owner | Secondary Owner | Agent | Reviewer | Human Escalation |
+|------------|---------------|-----------------|-------|----------|------------------|
+| Customer Activation | Customer Operations | — | L5-CUSTOMER | QA | NO |
+| Customer Success | Customer Operations | — | L5-CUSTOMER | QA | NO |
+| Service Operations | Customer Operations | — | L5-CUSTOMER | QA | NO |
+| Knowledge Operations | Knowledge Operations | — | L5-KNOWLEDGE | QA | NO |
+| Memory Operations | Memory Operations | — | L5-MEMORY | Knowledge Ops, Trust | NO |
+| Human Escalation | Human Escalation | — | L5-ESCALATION | Founder | YES |
+| Incident Communication | Human Escalation | Customer Operations | L5-ESCALATION | Founder | YES |
+
+### Engineering
+
+| Capability | Primary Owner | Secondary Owner | Agent | Reviewer | Human Escalation |
+|------------|---------------|-----------------|-------|----------|------------------|
+| Principal Architect | Principal Architect | — | L2-ARCHITECT | Founder | YES |
+| Orchestrator | Orchestrator | — | L1-ORCHESTRATOR | Founder | YES |
+| Backend | Backend | — | L6-BACKEND | Code Reviewer | NO |
+| Database | Database | — | L6-DATABASE | Code Reviewer, Trust | NO |
+| Realtime/Voice | Realtime/Voice | — | L6-VOICE | Code Reviewer, QA | NO |
+| Knowledge (Eng) | Knowledge Engineering | Knowledge Ops | L6-KNOW_ENG | Code Reviewer | NO |
+| Memory (Eng) | Memory Engineering | Memory Ops | L6-MEM_ENG | Code Reviewer, Trust | NO |
+| Frontend | Frontend | — | L6-FRONTEND | Code Reviewer, QA | NO |
+| Billing | Billing | — | L6-BILLING | Code Reviewer, QA | NO |
+| Security (Eng) | Security Engineering | Trust & Compliance | L6-SECURITY | Code Reviewer, Trust | NO |
+| Compliance (Eng) | Compliance Engineering | Trust & Compliance | L6-COMPLIANCE | Code Reviewer, Trust | NO |
+| Localization (Eng) | Localization Engineering | Localization (Product) | L6-LOCALIZE | Code Reviewer, Trust | NO |
+| Infrastructure | Infrastructure | — | L6-INFRA | Code Reviewer, Trust | NO |
+| Observability | Observability | — | L6-OBSERVE | Code Reviewer | NO |
+| Integration | Integration | — | L6-INTEGRATION | Code Reviewer, QA | NO |
+| Code Reviewer | Code Reviewer | — | L6-CODE_REVIEW | — | NO |
+
+### Trust
+
+| Capability | Primary Owner | Secondary Owner | Agent | Reviewer | Human Escalation |
+|------------|---------------|-----------------|-------|----------|------------------|
+| Security | Trust & Compliance | Security Engineering | L7-TRUST | Founder | YES |
+| Privacy | Trust & Compliance | — | L7-TRUST | Founder | YES |
+| GDPR | Trust & Compliance | — | L7-TRUST | Founder | YES |
+| Compliance | Trust & Compliance | Compliance Engineering | L7-TRUST | Founder | YES |
+| AI Transparency | Trust & Compliance | — | L7-TRUST | Founder | YES |
+| Trust UX | Trust & Compliance | Experience Design | L7-TRUST | Red Team | NO |
+| Legal-content coordination | Trust & Compliance | Brand & Content | L7-TRUST | Founder | YES |
+| Localization | Trust & Compliance | Localization Engineering | L7-TRUST | Founder | YES |
+
+### Verification
+
+| Capability | Primary Owner | Secondary Owner | Agent | Reviewer | Human Escalation |
+|------------|---------------|-----------------|-------|----------|------------------|
+| QA | QA | — | L8-QA | Red Team | NO |
+| Visual/UX QA | QA | Experience Design | L8-QA | Red Team | NO |
+| User Simulator | QA | Red Team | L8-QA | Red Team | NO |
+| Commercial Judge | Red Team | — | L8-REDTEAM | — | YES |
+| Red Team | Red Team | — | L8-REDTEAM | — | YES |
+| Product/Commercial Audit | Product Audit | — | L8-AUDIT | Founder | YES |
+
+### Intelligence
+
+| Capability | Primary Owner | Secondary Owner | Agent | Reviewer | Human Escalation |
+|------------|---------------|-----------------|-------|----------|------------------|
+| Analytics | Analytics | — | L9-ANALYTICS | Product Manager | NO |
+| Innovation Scout | Innovation Scout | — | L9-INNOVATION | Product Manager | NO |
+| Competitive Intelligence | Innovation Scout | Commercial Strategy | L9-INNOVATION | Commercial Strategy | NO |
+| Continuous Improvement | Innovation Scout | Analytics | L9-INNOVATION | Product Manager | NO |
+
+---
+
+## CONTEXT ARCHITECTURE
+
+### Context Types
+
+Every dispatched task receives a structured context package. Context is categorized into five layers:
+
+#### 1. Immutable Authority (never changes without Founder approval)
+
+* Founder Decisions (FOUNDER_DECISION_SET.md)
+* Approved Source of Truth
+* Approved Architecture (ARCHITECTURE.md, SYSTEM_MAP.md, INTEGRATION_RULES.md)
+* Frozen Voice Engine (VOICE_ENGINE.md, FROZEN_COMPONENTS.md)
+
+#### 2. Product Context (changes with product decisions)
+
+* Product Contract (PRODUCT_CONTRACT.md)
+* Business Rules (BUSINESS_RULES.md)
+* UX Rules (UX_RULES.md)
+* Design System (DESIGN_SYSTEM.md — when established)
+* Brand Guidelines (BRAND_GUIDELINES.md — when established)
+* Visual Direction (VISUAL_DIRECTION.md — when established)
+
+#### 3. Task Context (specific to each dispatched task)
+
+* objective
+* scope
 * acceptance criteria
-* known assumptions
-* technical unknowns
-* relevant artifacts
-* prior agent outputs
+* dependencies
+* assumptions
+* open questions
+* expected output
+* next owner
 
-Agents must not be forced to reconstruct project truth from conversation history alone.
+#### 4. Technical Context (specific to implementation)
 
-Persistent project truth must come from repository artifacts.
+* relevant architecture
+* repository state
+* implementation state
+* API contracts
+* schema state
+* deployment state
 
-### Handoff Model
+#### 5. Historical Context (learned from previous work)
 
-A structured handoff must communicate, where relevant:
+* Product Archaeology findings
+* previous decisions
+* previous rejected approaches
+* audit findings
+* red team findings
+* commercial assessments
+
+### Context Propagation Contract
+
+Every dispatched task carries a structured context package:
+
+```text
+TASK_ID
+PARENT_TASK_ID
+OBJECTIVE
+SCOPE
+AUTHORITY_LEVEL
+SOURCE_OF_TRUTH_REFERENCES
+RELEVANT_DECISIONS
+RELEVANT_REQUIREMENTS
+INPUT_ARTIFACTS
+DEPENDENCIES
+ASSUMPTIONS
+OPEN_QUESTIONS
+ACCEPTANCE_CRITERIA
+EXPECTED_OUTPUT
+NEXT_OWNER
+```
+
+This is persisted as a task artifact. Agents must not be forced to reconstruct project truth from conversation history alone.
+
+---
+
+## HANDOFF CONTRACT
+
+Every meaningful handoff must be structured:
 
 ```text
 TASK
@@ -3112,137 +3738,336 @@ NEXT OWNER
 STATUS
 ```
 
-Do not allow informal prose-only handoffs to become the sole project memory.
+No critical work should depend on an informal conversational handoff.
 
-### Dependency Model
+---
 
-Work may be:
+## ARTIFACT MODEL
 
-**Sequential** — One output required before another agent begins.
+### Persistent Artifacts (survive across sessions)
 
-Example:
+| Artifact | Created By | Consumed By | Persisted |
+|----------|------------|-------------|-----------|
+| Product Brief | Product Manager | Experience Design, Brand & Content, Commercial Strategy | YES |
+| Product Requirement | Product Manager | All builders | YES |
+| UX Specification | Experience Design | Frontend, QA | YES |
+| Design Artifact | Experience Design | Frontend, QA | YES |
+| Design System Specification | Experience Design | Frontend | YES |
+| Brand Guidelines | Brand & Content | All agents | YES |
+| Content Specification | Brand & Content | Frontend, QA | YES |
+| Commercial Brief | Commercial Strategy | All agents | YES |
+| Architecture Decision | Principal Architect | All engineers | YES |
+| Technical Specification | Principal Architect | Engineers | YES |
+| Implementation Change | Engineers | Code Reviewer, QA | YES |
+| Test Report | QA | All agents | YES |
+| Visual/UX Review | QA | Experience Design | YES |
+| Commercial Review | Red Team | Product Manager | YES |
+| Red Team Report | Red Team | Product Manager, Founder | YES |
+| Audit Report | Product Audit | Founder | YES |
+| Release Decision | Orchestrator | All agents | YES |
+| Rollback Decision | Orchestrator | All agents | YES |
+
+### Transient Artifacts (exist within task context)
+
+| Artifact | Created By | Consumed By | Persisted |
+|----------|------------|-------------|-----------|
+| Task Context | Orchestrator | Assigned agent | YES (task artifact) |
+| Handoff Document | Builder | Reviewer | YES (task artifact) |
+| Review Feedback | Reviewer | Builder | YES (task artifact) |
+| Revision Notes | Builder | Reviewer | YES (task artifact) |
+
+---
+
+## DEPENDENCY MODEL
+
+### Canonical Dependencies
+
 ```text
-Product Requirements → UX → Visual Design → Frontend
-```
-
-**Parallel** — Independent workstreams operating simultaneously.
-
-Example:
-```text
-Backend │ Database │ Security │ Observability
-```
-
-**Gated** — Downstream implementation waits for approval or validation.
-
-Example:
-```text
-Design System → Design → Frontend → Visual QA
-```
-
-The Orchestrator must understand these dependency types.
-
-### Revision Loop
-
-When an agent's work fails validation:
-
-```text
-BUILD
+FOUNDER TRUTH
+    ↓
+PRODUCT STRATEGY (Product Manager)
+    ↓
+PRODUCT REQUIREMENTS
+    ↓
+ ┌──────┼──────────────┐
+ ↓      ↓              ↓
+ UX    BRAND/CONTENT  COMMERCIAL
+ ↓      ↓              ↓
+ DESIGN SYSTEM         │
+ ↓      │              │
+ ┌──────┼──────────────┘
  ↓
-TEST
+ ARCHITECTURE (Principal Architect)
  ↓
+ ┌──────┼──────────────┐
+ ↓      ↓              ↓
+ENGINEERING          TRUST/COMPLIANCE
+(15 agents)          LOCALIZATION
+ ↓      ↓              ↓
+ ┌──────┼──────────────┘
+ ↓
+ TESTING (QA)
+ ↓
+ INDEPENDENT VERIFICATION
+ (Red Team, Code Reviewer, Product Audit)
+ ↓
+ ACCEPTANCE
+ ↓
+ FREEZE
+```
+
+### Parallelism Rules
+
+**Safe to parallelize:**
+
+* Product Requirements → UX ‖ Brand/Content ‖ Commercial
+* Architecture → Backend ‖ Database ‖ Security ‖ Observability ‖ Integration
+* Trust & Compliance review ‖ Code Review ‖ QA testing
+
+**Must be sequential:**
+
+* Product Requirements → UX → Visual Design → Frontend
+* Design System → Frontend (depends on tokens/components)
+* Backend → Integration (depends on API contracts)
+* All builders → Code Review → QA → Red Team → Acceptance
+
+**Gated:**
+
+* Design System must exist before major frontend implementation (FD-12)
+* Architecture must be approved before implementation
+* All changes require independent verification before merge
+
+### Dependency Rules
+
+1. The Orchestrator manages all dependencies
+2. No agent may begin work whose prerequisites are not met
+3. Parallel work must not create conflicting artifacts
+4. Dependency violations must be escalated, not silently resolved
+
+---
+
+## REVISION MODEL
+
+### Revision Flow
+
+```text
+BUILDER creates artifact
+      ↓
+REVIEWER evaluates
+      ↓
+┌─────────┴─────────┐
+│                   │
+APPROVED          REJECTED
+│                   │
+↓                   ↓
+MERGE          FINDING CLASSIFICATION
+                     ↓
+              RESPONSIBLE OWNER
+                     ↓
+              REVISION REQUESTED
+                     ↓
+              BUILDER REVISES
+                     ↓
+              RETEST
+                     ↓
+              RE-REVIEW
+                     ↓
+              ┌───────┴───────┐
+              │               │
+           APPROVED        REJECTED AGAIN
+              │               │
+              ↓               ↓
+           MERGE        ESCALATE TO
+                        HIGHER AUTHORITY
+```
+
+### Finding Classification
+
+| Class | Description | Handling |
+|-------|-------------|----------|
+| Technical | Code quality, bugs, performance | Return to builder |
+| Requirement | Does not satisfy requirements | Return to builder, clarify with Product Manager |
+| Architecture | Conflicts with architecture | Return to builder, review with Principal Architect |
+| Product | Does not satisfy product intent | Return to builder, review with Product Manager |
+| Design | Violates approved design | Return to builder, review with Experience Design |
+| Content | Contradicts product truth | Return to builder, review with Brand & Content |
+| Security/Compliance | Violates security or compliance | Return to builder, review with Trust & Compliance |
+| Commercial | Weakens positioning, harms conversion | Return to builder, review with Commercial Strategy |
+| Unknown | Cannot safely classify | Escalate to Orchestrator |
+
+### Revision Rules
+
+1. Never restart the entire project unnecessarily
+2. Never let a rejected artifact silently pass
+3. Never allow a builder to approve its own revision after rejection
+4. Track revision history — do not erase failure history
+5. Repeated failures (3+) escalate to higher authority
+
+---
+
+## FAILURE MODEL
+
+### Failure Classes
+
+| Class | Description | Retry? | Revision? | Alternative? | Escalation? | Rollback? | Human? |
+|-------|-------------|--------|-----------|--------------|-------------|-----------|--------|
+| Agent Failure | Agent unable to perform | YES (1x) | NO | Alternative agent | YES (if repeated) | NO | NO |
+| Task Failure | Output does not meet criteria | NO | YES | NO | YES (if repeated) | NO | NO |
+| Tool Failure | External tool/provider failure | YES (2x) | NO | Alternative provider | YES (if persistent) | NO | NO |
+| Context Failure | Insufficient context | NO | NO | Provide more context | NO | NO | NO |
+| Contradiction | Conflicting approved truth | NO | NO | NO | YES (mandatory) | NO | YES |
+| Dependency Failure | Prerequisite not met | NO | NO | NO | YES | NO | NO |
+| Quality Failure | Does not meet quality bar | NO | YES | NO | YES (if repeated) | NO | NO |
+| Commercial Failure | Commercially weak | NO | YES | NO | YES | NO | YES |
+| Security Failure | Security vulnerability | NO | YES | NO | YES (mandatory) | YES | YES |
+| Compliance Failure | Compliance violation | NO | YES | NO | YES (mandatory) | YES | YES |
+| Timeout | Task exceeds time limit | YES (1x) | NO | Alternative approach | YES (if repeated) | NO | NO |
+| Repeated Failure | 3+ failures on same task | NO | NO | NO | YES (mandatory) | NO | YES |
+
+### Failure Handling Rules
+
+1. Agent/tool failures are retried once with the same agent, then escalated
+2. Quality/commercial failures trigger revision to the responsible owner
+3. Security/compliance failures are mandatory escalation — never silently resolved
+4. Contradictions in approved truth are mandatory escalation — never guessed through
+5. Repeated failures (3+) are mandatory escalation to higher authority
+6. The system must never manufacture a decision to keep execution moving
+
+---
+
+## HUMAN ESCALATION
+
+### Mandatory Human Escalation
+
+The following MUST be escalated to the Human Founder:
+
+* Founder Decision required
+* Unresolved strategic conflict
+* Conflicting approved truth
+* Major architecture changes
+* Material commercial strategy changes
+* Legal uncertainty
+* Regulatory uncertainty
+* Serious security incident
+* Serious customer incident
+* Irreversible destructive action
+* Repeated autonomous failure (3+)
+* Budget/cost exceeding threshold
+
+### Escalation Protocol
+
+```text
+STOP → IDENTIFY → DOCUMENT → ESCALATE
+```
+
+The agent must NOT invent an answer to keep execution moving.
+
+---
+
+## AUTONOMOUS EXECUTION LOOP
+
+```text
 AUDIT
- ↓
-FAIL
- ↓
-IDENTIFY FAILURE OWNER
- ↓
-RETURN CONTEXT + FINDINGS
- ↓
-REVISE
- ↓
-RETEST
- ↓
-RE-AUDIT
+  ↓
+DISCOVER
+  ↓
+PROPOSE
+  ↓
+PRIORITIZE
+  ↓
+SELECT
+  ↓
+PLAN
+  ↓
+IMPLEMENT
+  ↓
+TEST
+  ↓
+REVIEW
+  ↓
+RED TEAM
+  ↓
+COMMERCIAL VALIDATION
+  ↓
+UX/VISUAL VALIDATION
+  ↓
+ACCEPT
+  ↓
+MERGE
+  ↓
+UPDATE PERSISTENT KNOWLEDGE
+  ↓
+AUDIT AGAIN
 ```
 
-Do not restart unrelated work.
+### Human Approval Gates
 
-Do not erase the failure history.
+Human approval is MANDATORY at:
 
-Do not allow an agent to declare its own failed work complete.
+* Any Founder Decision
+* Architecture changes
+* Brand/visual direction changes
+* Pricing/business model changes
+* Security/compliance policy changes
+* Major product scope changes
+* Irreversible destructive actions
+* Release to production (initial releases)
 
-### Failure Handling
+---
 
-Failure classes:
+## CHANGE CLASSIFICATION
 
-* **Technical Failure** — Agent/tool/code failure
-* **Requirement Failure** — Output does not satisfy requirements
-* **Architectural Failure** — Output conflicts with architecture
-* **Product Failure** — Output does not satisfy product intent
-* **Design Failure** — Output violates approved design direction
-* **Content Failure** — Copy contradicts product truth or content standards
-* **Security/Compliance Failure** — Output violates mandatory security or compliance requirements
-* **Integration Failure** — Output conflicts with another system/component
-* **Commercial Failure** — Output weakens positioning, harms conversion, confuses users, damages trust
-* **Unknown** — Issue cannot safely be classified
-
-Unknown or authority-conflicting failures must escalate rather than being guessed through.
-
-### Authority Escalation
-
-If an agent encounters:
-
-* conflicting Founder Decisions
-* missing Founder Decision
-* conflicting business rules
-* architectural contradiction
-* unresolved product strategy
-* material commercial ambiguity
-* major design-direction ambiguity
-* compliance uncertainty
-* security uncertainty
-
-the agent must NOT invent the answer.
-
-Use:
-
-**STOP → IDENTIFY → DOCUMENT → ESCALATE**
-
-The Orchestrator must surface the issue to the correct authority.
-
-### Traceability
-
-Every major implementation task must eventually be traceable:
+### SMALL
 
 ```text
-FOUNDER DECISION
-      ↓
-PRODUCT REQUIREMENT
-      ↓
-UX REQUIREMENT
-      ↓
-DESIGN DECISION
-      ↓
-CONTENT DECISION
-      ↓
-ARCHITECTURE
-      ↓
-IMPLEMENTATION
-      ↓
-TEST
-      ↓
-QA / VISUAL UX QA
-      ↓
-RED TEAM / COMMERCIAL JUDGE
-      ↓
-CODE REVIEW
-      ↓
-ACCEPTANCE
+INSPECT → IMPLEMENT → TEST
 ```
 
-Not every task will require every layer. The operating model must nevertheless preserve the ability to trace decisions through the system.
+Agent involvement: single builder + Code Reviewer
 
-### No Fabrication Rule
+### MEDIUM
+
+```text
+INSPECT → IMPACT ANALYSIS → PLAN → IMPLEMENT → TEST → AUDIT
+```
+
+Agent involvement: builder(s) + Code Reviewer + QA
+
+### LARGE / ARCHITECTURAL
+
+```text
+INSPECT → IMPACT ANALYSIS → PROPOSAL → STOP → OWNER APPROVAL → IMPLEMENT → TEST → AUDIT
+```
+
+Agent involvement: Product Manager + Principal Architect + builder(s) + Code Reviewer + QA + Red Team + Founder approval
+
+---
+
+## COMMERCIAL ACCEPTANCE
+
+A release may fail even when:
+
+* tests pass
+* code is correct
+* architecture is valid
+
+It must also satisfy applicable:
+
+* product requirements
+* UX quality
+* visual quality
+* brand consistency
+* copy accuracy
+* commercial viability
+* operational readiness
+* trust/compliance
+* European readiness
+
+The Red Team / Commercial Judge independently evaluates commercial acceptance.
+
+---
+
+## NO FABRICATION RULE
 
 The organization preserves a strict public-truth rule.
 
@@ -3263,7 +4088,9 @@ STATUS: OPEN
 
 Create a TODO for the appropriate owner.
 
-### Commercial Quality Must Not Be Subordinate to Engineering
+---
+
+## COMMERCIAL QUALITY
 
 A technically perfect product can still fail commercially.
 
@@ -3287,9 +4114,9 @@ The system must be capable of rejecting technically correct work that:
 * creates poor UX
 * creates commercial incoherence
 
-### Design Autopilot
+---
 
-Preserve the concept of an autonomous design improvement loop:
+## DESIGN AUTOPILOT
 
 ```text
 INSPECT CURRENT DESIGN
@@ -3318,9 +4145,9 @@ Never preserve inferior design merely because it was original.
 
 Never sacrifice functionality for aesthetics.
 
-### Continuous Improvement Loop
+---
 
-Define the canonical autonomous loop:
+## CONTINUOUS IMPROVEMENT LOOP
 
 ```text
 AUDIT
@@ -3345,33 +4172,70 @@ VALIDATE
   ↓
 MERGE OR ROLLBACK
   ↓
-UPDATE MEMORY
+UPDATE PERSISTENT KNOWLEDGE
   ↓
 AUDIT AGAIN
 ```
 
 This loop must respect authority hierarchy and change control.
 
-### Deterministic Task Dispatch
+---
 
-| Task Type | Agent | Input | Output |
-|-----------|-------|-------|--------|
-| Product requirement | Product Manager | Founder Decision / strategic direction | Product requirement, acceptance criteria |
-| Customer journey | UX | Product requirement | Journey specification, interaction flow |
-| Visual design | Visual Design | UX specification, design system | Design artifact, component specification |
-| Content / copy | Content | Product requirement, brand guidelines | Copy artifact, content specification |
-| Database schema | Database | Entity definition | Migration script |
-| API endpoint | Backend | API specification | Implementation code |
-| Event handler | Backend | Event specification | Handler code |
-| Test case | QA | Acceptance criteria | Test code |
-| Visual/UX QA | QA | Design artifact, implementation | Visual/UX verification report |
-| Security control | Security | Security requirement | Implementation code |
-| Knowledge feature | Knowledge | Knowledge specification | Implementation code |
-| Voice path | Realtime/Voice | Call path specification | Implementation code |
-| Billing feature | Billing | Billing specification | Implementation code |
-| Commercial evaluation | Red Team / Commercial Judge | Product artifact | Commercial assessment |
-| Innovation proposal | Innovation Scout | Current state | Improvement proposal |
-| Product audit | Product / Commercial Audit | Current state | Audit report |
+## AGENT SCORECARD
+
+For every agent, the Orchestrator tracks:
+
+| Metric | Description |
+|--------|-------------|
+| Quality | Does the agent's output meet quality bar? |
+| Reliability | Does the agent complete tasks successfully? |
+| Specialization | Is the agent's expertise appropriate for the task? |
+| Independence | Is the agent sufficiently independent from builders? |
+| Context Efficiency | Does the agent receive the right context? |
+| Handoff Quality | Are handoffs structured and complete? |
+| Failure Rate | How often does the agent fail? |
+| Review Rejection Rate | How often is the agent's work rejected? |
+
+The organization exists to produce excellent outcomes, not merely fast ones.
+
+---
+
+## FUTURE OPEN-CODE IMPLEMENTATION CONTRACT
+
+The future OpenCode orchestration layer must be able to:
+
+* discover available agents
+* dispatch tasks
+* provide authoritative context
+* persist task state
+* persist artifacts
+* enforce dependencies
+* run parallel tasks
+* wait for prerequisites
+* collect results
+* request revisions
+* invoke reviewers
+* record rejection
+* retry failures
+* escalate
+* rollback
+* maintain audit history
+
+This is the implementation prerequisite for Phase 2.
+
+---
+
+## PHASE 2 GATE
+
+> **Actual Agent Orchestration must be implemented and validated before Phase 2 platform development begins.**
+
+After 005E:
+
+```text
+ORCHESTRATION SPECIFICATION = COMPLETE
+ORCHESTRATION IMPLEMENTATION = NOT STARTED
+PHASE 2 = NOT STARTED
+```
 
 ---
 
